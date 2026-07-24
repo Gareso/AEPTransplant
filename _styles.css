@@ -114,6 +114,15 @@ section.cover {
     background-size: cover !important;
     z-index: 100;
     background-image: url('assets/BG.svg') !important;
+    height: 100vh;
+    height: 100dvh;
+}
+
+@media screen and (max-height: 750px) {
+    section.cover .cover-main > img {
+        width: 260px !important;
+        margin: 10px auto !important;
+    }
 }
 
 .app-nav {
@@ -178,8 +187,9 @@ section.cover {
 section.cover.show .cover-main p.cover-intro {
     color: #ffffff;
     font-weight: 400;
-    margin: 0.5em;
+    margin: 0.5em auto;
     margin-top: 2.5em;
+    max-width: 600px;
     padding-left: 25px;
     padding-right: 25px;
     font-size: 1.3rem;
