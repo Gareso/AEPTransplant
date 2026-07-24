@@ -30,4 +30,4 @@ It is a **CEP extension** (not a script), so the installation is slightly differ
 
 <h3 id="open">Opening the panel</h3>
 
-Once installed, open AEP Transplant from **Window → Extensions** in After Effects. The panel can be docked anywhere — it works best next to the Project panel.
+Once installed, open AEP Transplant from **Window → Extensions** in After Effects. The panel can be docked anywhere; it works best next to the Project panel.

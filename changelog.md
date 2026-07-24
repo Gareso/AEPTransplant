@@ -8,7 +8,7 @@
 
 * Initial release.
 * Browse the full folder/comp/asset tree of any `.aep`, `.psd`, `.psb`, or `.ai` file without opening it in After Effects.
-* Import selected items with their real dependencies — nothing more.
+* Import selected items with their real dependencies, nothing more.
 * Smart Merge: fold incoming content into existing folder structure; resolve duplicate comps and assets (Replace / Use Current / Keep Both).
 * Swap Source: replace all layers of a PSD or AI file across the current project in one action.
 * Target Picker: manually assign any imported item to a specific existing comp, footage item, or folder.

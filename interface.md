@@ -24,8 +24,8 @@ The top bar is where you load a source file.
 
 > 📸 *[Image needed: search bar and filter checkboxes]*
 
-- **Search bar** — filters the tree to items whose names match your query. Clear with the × button or by deleting the text.
-- **Filter checkboxes** — show or hide items by type: **Comps**, **Media**, **Graphics**, **Design**, **3D**. OPT/ALT + click a filter to solo it (hide everything else); OPT/ALT + click again to restore all.
+- **Search bar**: filters the tree to items whose names match your query. Clear with the × button or by deleting the text.
+- **Filter checkboxes**: show or hide items by type: **Comps**, **Media**, **Graphics**, **Design**, **3D**. OPT/ALT + click a filter to solo it (hide everything else); OPT/ALT + click again to restore all.
 
 Filter preferences are saved between sessions.
 
@@ -40,12 +40,12 @@ The main panel shows the full folder and asset structure of the loaded file, mir
 - **Folders** expand and collapse on click. OPT/ALT + click a folder arrow to collapse or expand all folders at once.
 - **Comps** show a tooltip on hover with dimensions, duration, frame rate, and usage count.
 - **Label colors** are shown as small swatches, matching After Effects' label palette.
-- **Solids, Nulls, and Adjustment Layers** are excluded — they're scaffolding, not reusable assets.
+- **Solids, Nulls, and Adjustment Layers** are excluded, since they're scaffolding, not reusable assets.
 - The **↺ Reload** button (top-right corner of the tree) re-reads the file from disk without clearing your current selection.
 
-**Checking an item** selects it for import. A **crosshair icon** appears next to each checked item — clicking it opens the [Target Picker](features.md#target-picker).
+**Checking an item** selects it for import. A **crosshair icon** appears next to each checked item; clicking it opens the [Target Picker](features.md#target-picker).
 
-For PSD and AI files, a **SWAP SOURCE** row appears above the file's layer items — see [Swap Source](features.md#swap-source) for details.
+For PSD and AI files, a **SWAP SOURCE** row appears above the file's layer items. See [Swap Source](features.md#swap-source) for details.
 
 ---
 
@@ -53,7 +53,7 @@ For PSD and AI files, a **SWAP SOURCE** row appears above the file's layer items
 
 A single checkbox: **Try to merge with current project**.
 
-When checked, imported content is folded into your existing folder structure — matching folders are combined rather than creating a new top-level import folder. See [Smart Merge](features.md#smart-merge) for the full behavior.
+When checked, imported content is folded into your existing folder structure: matching folders are combined rather than creating a new top-level import folder. See [Smart Merge](features.md#smart-merge) for the full behavior.
 
 This preference is saved between sessions.
 
@@ -61,7 +61,7 @@ This preference is saved between sessions.
 
 ## Import Button & Status
 
-**Import Selected (N)** — imports all checked items. The button shows the count of selected items and is disabled when nothing is checked.
+**Import Selected (N)**: imports all checked items. The button shows the count of selected items and is disabled when nothing is checked.
 
 A status line below the button shows progress during import, and a summary once it's done.
 

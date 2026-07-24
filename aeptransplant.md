@@ -15,9 +15,9 @@ Every motion designer knows this situation: you need to revert a single comp to 
 
 **For. One. Comp.**
 
-The same problem comes up constantly — borrowing an asset from a colleague's project, pulling a rig you built six months ago, updating a comp another animator owns without disrupting your own project. These should be quick operations.
+The same problem comes up constantly: borrowing an asset from a colleague's project, pulling a rig you built six months ago, updating a comp another animator owns without disrupting your own project. These should be quick operations.
 
-**AEP Transplant makes them simple.** Open any `.aep`, `.psd`, or `.ai` file in the panel, browse its full contents, pick exactly what you need, and import only that — along with its real dependencies and nothing else.
+**AEP Transplant makes them simple.** Open any `.aep`, `.psd`, or `.ai` file in the panel, browse its full contents, pick exactly what you need, and import only that, along with its real dependencies and nothing else.
 
 When duplicate assets exist, AEP Transplant asks you what to do: replace, use the current version, or keep both. Your project stays tidy either way.
 

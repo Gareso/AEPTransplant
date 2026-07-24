@@ -1,6 +1,6 @@
 # AEP Transplant
 
-[Intro placeholder — brief welcome sentence.]
+[Intro placeholder: brief welcome sentence.]
 
 ---
 

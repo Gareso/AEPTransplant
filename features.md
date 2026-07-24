@@ -9,7 +9,7 @@
 The core workflow:
 
 1. Click **→ Choose AEP, PSD or AI…** and pick a source file.
-2. The panel reads the file and displays its full folder/asset structure — no need to open it in After Effects.
+2. The panel reads the file and displays its full folder/asset structure, no need to open it in After Effects.
 3. Check the items you want to import.
 4. Click **Import Selected**.
 
@@ -19,11 +19,11 @@ AEP Transplant extracts only the checked items and their real dependencies. Ever
 
 | Type | What you browse | What gets imported |
 | ---- | --------------- | ------------------ |
-| `.aep` | Full project tree — comps, folders, all footage | Selected items + their real comp/footage dependencies |
+| `.aep` | Full project tree: comps, folders, all footage | Selected items + their real comp/footage dependencies |
 | `.psd` / `.psb` | Layers of the document | Selected layers as individual footage items |
 | `.ai` | Layers / artboards of the document | Selected layers as individual footage items |
 
-> The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once) — this parks everything into a labeled folder at the project root — then manually delete that folder.
+> The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then manually delete that folder.
 
 ---
 
@@ -53,7 +53,7 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 When you load a PSD or AI file, a **SWAP SOURCE** row appears above the file's individual layer items, marked with a blue badge.
 
-**Swap Source** lets you replace every layer of a source file across your entire current project in one action — instead of updating each layer one by one. This is perfect for re-skinning a character rig or updating artwork across a complex project.
+**Swap Source** lets you replace every layer of a source file across your entire current project in one action, instead of updating each layer one by one. This is perfect for re-skinning a character rig or updating artwork across a complex project.
 
 **How it works:**
 
@@ -72,7 +72,7 @@ AEP Transplant matches the source file's layers to the targeted item's layers by
 
 > 📸 *[Image needed: screenshot of the Target Picker modal overlaid on the panel]*
 
-When an item is checked, a **crosshair icon** appears next to it. Click it to open the Target Picker — a modal that lets you manually point that imported item at a specific existing item or folder in your current project, overriding the automatic name-based merge matching.
+When an item is checked, a **crosshair icon** appears next to it. Click it to open the Target Picker, a modal that lets you manually point that imported item at a specific existing item or folder in your current project, overriding the automatic name-based merge matching.
 
 | Target type | What happens at import |
 | ----------- | ---------------------- |
@@ -101,7 +101,7 @@ Once a target is set, the crosshair icon turns **blue**. OPT/ALT + click it to c
 | Design | Layered design files (PSD, AI, PDF, EPS…) |
 | 3D | 3D asset files (C4D, OBJ, FBX, GLTF…) |
 
-**OPT/ALT + click** a filter checkbox to solo it — showing only that category and hiding the rest. OPT/ALT + click again to restore the previous state.
+**OPT/ALT + click** a filter checkbox to solo it, showing only that category and hiding the rest. OPT/ALT + click again to restore the previous state.
 
 Filter preferences are saved between sessions.
 
@@ -119,7 +119,7 @@ AEP Transplant watches the files you've worked with and tells you when they chan
 
 Click **↺ Reload** to re-read the current file from disk and pick up any changes.
 
-This is especially useful on shared projects — if a teammate updates an `.aep` you're sourcing from, the dot lets you know before you import stale content.
+This is especially useful on shared projects: if a teammate updates an `.aep` you're sourcing from, the dot lets you know before you import stale content.
 
 ---
 
@@ -136,4 +136,4 @@ AEP Transplant separates the import into two phases, each with different undo be
 1. Undo the merge: Cmd+Z/Ctrl+Z **once**. This parks everything back into a single labeled folder at the project root (named after the source file, suffixed `(not merged)` if anything was left unmatched).
 2. Manually delete that folder from the Project panel.
 
-Nothing is ever silently lost — it's one manual deletion instead of a full automatic undo.
+Nothing is ever silently lost; it's one manual deletion instead of a full automatic undo.
