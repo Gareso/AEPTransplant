@@ -14,7 +14,7 @@ It is a **CEP extension** (not a script), so the installation is slightly differ
 1. Download and install the [aescripts + aeplugins Manager](https://aescripts.com/learn/aescripts-aeplugins-manager-app/).
 2. Search for **AEP Transplant** and click **Install**.
 3. Restart After Effects.
-4. Open **Window → AEP Transplant**.
+4. Open **Window → Extensions → AEP Transplant**.
 
 ---
 
@@ -24,10 +24,10 @@ It is a **CEP extension** (not a script), so the installation is slightly differ
 2. Download and open [ZXP/UXP Installer](https://aescripts.com/learn/zxp-installer/).
 3. Drag the `.zxp` file into the installer window.
 4. Restart After Effects.
-5. Open **Window → AEP Transplant**.
+5. Open **Window → Extensions → AEP Transplant**.
 
 ---
 
 <h3 id="open">Opening the panel</h3>
 
-Once installed, open AEP Transplant from the **Window** menu in After Effects. The panel can be docked anywhere — it works best next to the Project panel.
+Once installed, open AEP Transplant from **Window → Extensions** in After Effects. The panel can be docked anywhere — it works best next to the Project panel.
