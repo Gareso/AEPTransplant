@@ -1,7 +1,7 @@
 <img src="assets/AEP_Transplant_logo.svg" style="width:480px; display:block; margin: 20px auto;" />
 
 <p class="cover-intro">
-  Pull comps & assets from any <strong>AEP, PSD or AI</strong><br>directly into your current project.
+  Pull comps & assets from any <strong>AEP, PSD or AI</strong> directly into your current project.
 </p>
 
 <p class="cover-description">
