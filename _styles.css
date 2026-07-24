@@ -116,7 +116,6 @@ section.cover {
     background-image: url('assets/BG.svg') !important;
     min-height: 100vh;
     min-height: 100dvh;
-    margin-top: -35px;
 }
 
 .app-nav {
