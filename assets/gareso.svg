@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 463.53 113.18">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #f69470;
+      }
+
+      .st1 {
+        fill: #f15b4e;
+      }
+
+      .st2 {
+        fill: #00b2bb;
+      }
+
+      .st3 {
+        fill: #f69471;
+      }
+
+      .st4 {
+        fill: #f15c57;
+      }
+
+      .st5 {
+        fill: #f3735a;
+      }
+
+      .st6 {
+        fill: #eceae9;
+      }
+    </style>
+  </defs>
+  <polygon class="st2" points="52.68 56.17 89.63 56.17 89.63 93.12 52.68 56.17"/>
+  <polygon class="st3" points="242.91 93.12 205.96 93.12 205.96 56.17 242.91 93.12"/>
+  <polygon class="st3" points="52.68 56.17 15.73 19.22 89.63 19.22 52.68 56.17"/>
+  <polygon class="st6" points="52.68 56.17 89.63 93.12 15.73 93.12 52.68 56.17"/>
+  <polygon class="st3" points="129.32 19.22 166.27 93.12 92.37 93.12 129.32 19.22"/>
+  <polygon class="st4" points="52.68 56.17 15.73 93.12 15.73 19.22 52.68 56.17"/>
+  <rect class="st2" x="169.01" y="56.17" width="36.95" height="36.95"/>
+  <rect class="st2" x="330.55" y="51.19" width="34.73" height="34.73" transform="translate(53.42 266.1) rotate(-45)"/>
+  <polygon class="st5" points="323.36 68.56 298.8 93.12 347.92 93.12 323.36 68.56"/>
+  <rect class="st6" x="305.99" y="26.63" width="34.73" height="34.73" transform="translate(63.6 241.54) rotate(-45)"/>
+  <polygon class="st1" points="323.36 19.44 347.92 44 372.48 19.44 323.36 19.44"/>
+  <rect class="st6" x="245.37" y="68.33" width="24.79" height="24.79"/>
+  <rect class="st2" x="245.37" y="43.78" width="24.79" height="24.79"/>
+  <rect class="st3" x="245.37" y="19.22" width="24.79" height="24.79"/>
+  <polygon class="st4" points="269.73 68.33 270.16 93.12 294.94 93.12 269.73 68.33"/>
+  <polygon class="st4" points="270.16 43.78 270.16 68.57 294.94 68.57 270.16 43.78"/>
+  <polygon class="st4" points="270.16 19.22 270.16 44.01 294.94 44.01 270.16 19.22"/>
+  <path class="st4" d="M169.04,56.17c0-20.39,16.53-36.93,36.93-36.93s36.93,16.53,36.93,36.93h-73.85Z"/>
+  <circle class="st0" cx="410.91" cy="56.17" r="36.89" transform="translate(-2.06 94.4) rotate(-13.07)"/>
+</svg>
