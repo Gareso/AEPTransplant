@@ -5,6 +5,7 @@
 * [Features](features.md#features)
   * [Browse & Import](features.md#browse-import)
   * [Smart Merge](features.md#smart-merge)
+  * [External Assets](features.md#external-assets)
   * [Swap Source](features.md#swap-source)
   * [Target Picker](features.md#target-picker)
   * [Search & Filter](features.md#search-filter)

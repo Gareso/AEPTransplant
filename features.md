@@ -33,7 +33,15 @@ AEP Transplant extracts only the checked items and their real dependencies. Ever
 
 Enable **Try to merge with current project** before importing to fold the incoming content into your existing folder structure.
 
-With merge on, AEP Transplant matches each imported folder by name against your current project and combines them rather than creating a new top-level import folder. If a same-named item already exists in your project, you'll be prompted:
+With merge on, AEP Transplant matches each imported folder against your current project and combines them rather than creating a new top-level import folder. Matching happens in three passes, in order:
+
+1. **Exact name.** An imported folder is combined with a folder of the identical name in your project.
+2. **Similar name.** AEP Transplant recognizes common naming variations: ordering prefixes and suffixes are ignored (`a.precomps` matches `02_PRECOMPS`), and common naming dialects count as the same folder (`Images` / `Bitmaps` / `Graphics` / `PNGs`, `Footage` / `Videos` / `Movies`, `Audio` / `Music` / `SFX`, `Precomps` / `Pre Comps` / `Precompositions`, and more).
+3. **Content.** If nothing matches by name at all, a folder whose contents already exist somewhere in your project is combined into wherever those live.
+
+A folder that finds no match of its own doesn't strand what's inside it. AEP Transplant keeps looking one level deeper: subfolders hunt for their own match independently, so a source project that nests everything under one project-named folder still merges cleanly instead of landing as a single unmatched block. Whatever remains after that still gets carried into the closest matched folder, so nothing is left behind unless truly nothing in that branch matches anything in your project.
+
+If a same-named item already exists in your project, you'll be prompted:
 
 | Option | What it does |
 | ------ | ------------ |
@@ -44,6 +52,23 @@ With merge on, AEP Transplant matches each imported folder by name against your 
 The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores everything to a labeled folder at the project root). The import that preceded it is separate and not undoable.
 
 > Merge preference (on/off) is remembered between sessions.
+
+---
+
+<h2 id="external-assets">External Assets</h2>
+
+> 📸 *[Image needed: screenshot of the External Assets Found dialog]*
+
+If the items you're importing use footage stored outside your current project's folder (a colleague's drive, a different job folder, anywhere not under your project), AEP Transplant asks what to do before finishing the import:
+
+| Option | What it does |
+| ------ | ------------ |
+| **Copy to Project** | Copies the external files into your project folder and relinks the imported items to the copies. |
+| **Keep Original** | Leaves the imported items linked to their current location. |
+
+Copies land in a new folder named `<source file> - AEP Transplant`, created next to wherever your project already keeps most of its footage. Image sequences are copied as a whole, every frame included. If you import from the same source file again later, previously copied assets are reused instead of duplicated.
+
+> This check only runs on a saved project, since AEP Transplant needs your project's location to know what counts as "external" in the first place.
 
 ---
 
