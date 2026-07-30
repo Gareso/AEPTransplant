@@ -1,14 +1,23 @@
 # Interface
 
-> 📸 *[Image needed: annotated screenshot of the full AEP Transplant panel]*
-
 The panel is divided into five zones, from top to bottom:
+
+<img src="assets/interface-panel-overview.svg" alt="The five zones of the AEP Transplant panel" class="doc-illustration bare xl" />
 
 ---
 
 ## File Picker
 
-> 📸 *[Image needed: close-up of the file picker bar]*
+<div class="illustration-row">
+  <div>
+    <p class="illustration-caption">Before selecting a file</p>
+    <img src="assets/interface-file-picker-empty.svg" alt="File picker before a file is loaded" class="doc-illustration panel lg" />
+  </div>
+  <div>
+    <p class="illustration-caption">After loading a file</p>
+    <img src="assets/interface-file-picker-loaded.svg" alt="File picker after a file is loaded" class="doc-illustration panel lg" />
+  </div>
+</div>
 
 The top bar is where you load a source file.
 
@@ -22,7 +31,7 @@ The top bar is where you load a source file.
 
 ## Search & Filters
 
-> 📸 *[Image needed: search bar and filter checkboxes]*
+<img src="assets/interface-search-filters.svg" alt="Search bar and filter checkboxes" class="doc-illustration panel" />
 
 - **Search bar**: filters the tree to items whose names match your query. Clear with the × button or by deleting the text.
 - **Filter checkboxes**: show or hide items by type: **Comps**, **Media**, **Graphics**, **Design**, **3D**. OPT/ALT + click a filter to solo it (hide everything else); OPT/ALT + click again to restore all.
@@ -33,7 +42,7 @@ Filter preferences are saved between sessions.
 
 ## Asset Tree
 
-> 📸 *[Image needed: screenshot of the tree panel with folders, comps, and assets]*
+<img src="assets/interface-asset-tree.svg" alt="The asset tree with folders, comps, and a swap source group" class="doc-illustration panel" />
 
 The main panel shows the full folder and asset structure of the loaded file, mirroring After Effects' Project panel layout.
 
@@ -45,21 +54,27 @@ The main panel shows the full folder and asset structure of the loaded file, mir
 
 **Checking an item** selects it for import. A **crosshair icon** appears next to each checked item; clicking it opens the [Target Picker](features.md#target-picker).
 
-For PSD and AI files, a **SWAP SOURCE** row appears above the file's layer items. See [Swap Source](features.md#swap-source) for details.
+For any PSD or AI file, a **SWAP SOURCE** row appears above its layer items, whether that file was loaded directly or is nested inside an `.aep`. See [Swap Source](features.md#swap-source) for details.
 
 ---
 
 ## Merge Option
 
+<img src="assets/interface-merge-option.svg" alt="The merge checkbox and Folder Name Settings button" class="doc-illustration bare compact" />
+
 A single checkbox: **Try to merge with current project**.
 
 When checked, imported content is folded into your existing folder structure: matching folders are combined rather than creating a new top-level import folder. See [Smart Merge](features.md#smart-merge) for the full behavior.
+
+The small folder icon next to it opens [Folder Name Settings](features.md#folder-name-settings), where you customize the word lists that drive similar-name matching.
 
 This preference is saved between sessions.
 
 ---
 
 ## Import Button & Status
+
+<img src="assets/interface-import-status.svg" alt="The Import Selected button and status line" class="doc-illustration panel" />
 
 **Import Selected (N)**: imports all checked items. The button shows the count of selected items and is disabled when nothing is checked.
 
@@ -69,7 +84,7 @@ A status line below the button shows progress during import, and a summary once 
 
 ## Recent Projects
 
-> 📸 *[Image needed: screenshot of the Recent Projects dropdown]*
+<img src="assets/interface-recent-projects.svg" alt="The Recent Projects dropdown" class="doc-illustration panel" />
 
 The clock button opens a dropdown list of the last 10 files you loaded in the panel. Each entry shows a blue dot if the file has been saved since you last loaded it here.
 

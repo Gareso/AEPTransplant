@@ -292,6 +292,92 @@ section.cover .cover-main>p:last-child a:hover {
   font-weight: 600;
 }
 
+.doc-illustration {
+    display: block;
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    margin: 1.2em 0;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.doc-illustration.wide {
+    max-width: 100%;
+}
+
+/* Real panel screenshots (native ~320px CEP panel width) - shown at their
+   actual size against the panel's own dark background instead of being
+   stretched to fill a white card, which would blur and misrepresent them. */
+/* For illustrations that mix a real UI mockup with annotations sitting in
+   transparent space next to it - no card chrome, so the annotation area
+   blends straight into the page background instead of looking boxed in. */
+.doc-illustration.bare {
+    background: transparent;
+    border: none;
+}
+/* A "bare" illustration is usually a small control (not a full panel or a
+   wide diagram) with annotations floating in transparent space next to it -
+   without a cap it inherits the 768px "wide diagram" size and blows up a
+   tiny control to giant scale. */
+.doc-illustration.bare.modal {
+    max-width: 480px;
+}
+.doc-illustration.bare.compact {
+    max-width: 420px;
+}
+/* A single small icon (not a control or modal) - sized close to its own
+   intrinsic resolution so it isn't upscaled past native size and left
+   blurry, unlike the larger bare variants above. */
+.doc-illustration.bare.icon {
+    max-width: 260px;
+}
+.doc-illustration.xl {
+    max-width: 672px;
+}
+
+.illustration-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 1.2em 0;
+}
+.illustration-row .doc-illustration {
+    margin: 4px 0 0;
+    /* Without this, flex's default shrink squeezes both images to fit
+       side by side regardless of max-width, silently undoing any size
+       increase - wrap onto separate lines instead of shrinking below it. */
+    flex-shrink: 0;
+}
+.illustration-caption {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin: 0;
+}
+
+.doc-illustration.panel {
+    width: 100%;
+    max-width: 336px;
+    height: auto;
+    background: #2b2b2b;
+    border-color: #444;
+}
+/* Higher specificity than .panel alone so it reliably wins regardless of
+   declaration order - the file-picker before/after pair need extra room
+   since each one only shows a single short bar, not a full tree.
+   An explicit width (not %) matters here specifically: inside the flex
+   .illustration-row, the wrapping <div> has no defined width of its own,
+   so a percentage width on the <img> can't resolve against it and falls
+   back to the SVG's raw intrinsic size (~360px) - silently ignoring
+   max-width entirely. max-width:100% keeps it from overflowing narrow
+   viewports once flex-wrap drops it to its own line. */
+.doc-illustration.panel.lg {
+    width: 460px;
+    max-width: 100%;
+}
+
 .responsive-logo {
     width: 35%;
     max-width: 240px;

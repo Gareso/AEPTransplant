@@ -1,0 +1,203 @@
+<svg viewBox="0 0 600 640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <g id="chevron-down"><path d="M-4,-1.5 L0,2.5 L4,-1.5" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="chevron-right"><path d="M-1.5,-4 L2.5,0 L-1.5,4" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <path id="folder-icon" d="M-6,-4.7 H-1.3 L0.3,-3 H6 C6.6,-3 7,-2.5 7,-2 V4.3 C7,4.9 6.6,5.3 6,5.3 H-6 C-6.6,5.3 -7,4.9 -7,4.3 V-3.7 C-7,-4.3 -6.6,-4.7 -6,-4.7 Z" fill="#9a9a9a"/>
+    <g id="type-comp"><g transform="scale(0.5) translate(-12,-12)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="12 2 2 7 12 12 22 7"/>
+      <polyline points="2 17 12 22 22 17"/>
+      <polyline points="2 12 12 17 22 12"/>
+    </g></g>
+    <g id="type-media"><g transform="scale(0.5) translate(-12,-12)" fill="#9a9a9a" fill-rule="evenodd">
+      <path d="M2 3h20v18H2V3zm8 5v8l6-4-6-4z"/>
+    </g></g>
+    <g id="type-graphics"><g transform="scale(0.5) translate(-12,-12)" fill="#9a9a9a">
+      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+    </g></g>
+    <g id="type-design"><g transform="scale(0.5) translate(-12,-12)" fill="#9a9a9a">
+      <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+    </g></g>
+    <g id="type-threed"><g transform="scale(0.5) translate(-12,-12)" fill="#9a9a9a">
+      <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L18.5 7 12 9.82 5.5 7 12 4.18zM4 9.18l7 3.5v7.14l-7-3.5V9.18zm9 10.64v-7.14l7-3.5v7.14l-7 3.5z"/>
+    </g></g>
+    <g id="target-icon"><g transform="scale(0.5417) translate(-12,-12)" fill="none" stroke-width="2"><circle cx="12" cy="12" r="7"/><line x1="12" y1="1" x2="12" y2="23"/><line x1="1" y1="12" x2="23" y2="12"/></g></g>
+    <g id="checkbox-off"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#1a1a1a" stroke="#8a8a8a" stroke-width="1.3"/></g>
+    <g id="checkbox-on"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#4d9fff"/><path d="M-3.3,0.3 L-1.3,2.3 L3.3,-2.7" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="filter-check"><rect width="10" height="10" rx="3" fill="#4d9fff"/><path d="M2.2,5 L4.2,7 L7.4,3" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </defs>
+
+  <rect width="320" height="640" rx="8" fill="#2b2b2b" stroke="#444"/>
+
+  <!-- File Picker -->
+  <path d="M13,18 H36 V40 H13 Q8,40 8,35 V23 Q8,18 13,18 Z" fill="#232323" stroke="#444"/>
+  <circle cx="12" cy="17" r="4" fill="#4d9fff"/>
+  <g transform="translate(22,29) scale(0.5833)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle r="9"/><polyline points="0,-5 0,0 4,2"/></g>
+  <path d="M36,18 H58 Q63,18 63,23 V35 Q63,40 58,40 H36 Z" fill="#232323" stroke="#444"/>
+  <text x="49.5" y="33" fill="#e0e0e0" font-size="11" text-anchor="middle">✕</text>
+  <circle cx="76" cy="27" r="3" fill="#4d9fff"/>
+  <text x="86" y="33" fill="#9a9a9a" font-size="13">Colleague_Rodrigo.aep</text>
+
+  <!-- Search & Filters -->
+  <rect x="8" y="58" width="304" height="24" rx="5" fill="#232323" stroke="#444"/>
+  <g transform="translate(20,70)" fill="none" stroke="#9a9a9a" stroke-width="1.4"><circle r="5"/><line x1="3.9" y1="3.9" x2="7.5" y2="7.5"/></g>
+  <text x="32" y="74" fill="#e0e0e0" font-size="12">robo</text>
+
+  <g font-size="10" fill="#9a9a9a">
+    <use xlink:href="#filter-check" href="#filter-check" x="8" y="94"/><text x="22" y="103">Comps</text>
+    <use xlink:href="#filter-check" href="#filter-check" x="66" y="94"/><text x="80" y="103">Media</text>
+    <use xlink:href="#filter-check" href="#filter-check" x="120" y="94"/><text x="134" y="103">Graphics</text>
+    <use xlink:href="#filter-check" href="#filter-check" x="184" y="94"/><text x="198" y="103">Design</text>
+    <use xlink:href="#filter-check" href="#filter-check" x="242" y="94"/><text x="256" y="103">3D</text>
+  </g>
+
+  <!-- Asset Tree (same content as the dedicated Asset Tree illustration) -->
+  <rect x="8" y="118" width="304" height="392" rx="6" fill="#232323" stroke="#3a3a3a"/>
+  <rect x="284" y="124" width="20" height="20" rx="4" fill="#232323" stroke="#3a3a3a"/>
+  <g transform="translate(294,134)" fill="none" stroke="#9a9a9a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="4,-6 4,-3 1,-3"/>
+    <path d="M2.7,0.6 A4,4 0 1 1 3.7,-3.1"/>
+  </g>
+
+  <g font-size="12" fill="#e0e0e0">
+    <!-- 01_MAIN (depth 0) -->
+    <rect x="16" y="126" width="8" height="8" rx="2" fill="#c4605c"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="37" y="130"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="51" y="130"/>
+    <text x="62" y="133" fill="#b8bcc2" font-weight="600" font-size="11">01_MAIN</text>
+
+    <!-- HERO_Shot (depth 1, checked) -->
+    <rect x="16" y="150" width="8" height="8" rx="2" fill="#e8920d"/>
+    <use xlink:href="#target-icon" href="#target-icon" x="55" y="154" stroke="#4d9fff"/>
+    <use xlink:href="#checkbox-on" href="#checkbox-on" x="79" y="154"/>
+    <use xlink:href="#type-comp" href="#type-comp" x="99" y="154"/>
+    <text x="118" y="158">HERO_Shot</text>
+
+    <!-- EndCard_PRE (depth 1) -->
+    <rect x="16" y="174" width="8" height="8" rx="2" fill="#3da2a5"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="55" y="178"/>
+    <use xlink:href="#type-comp" href="#type-comp" x="75" y="178"/>
+    <text x="94" y="182" fill="#9a9a9a">EndCard_PRE</text>
+
+    <!-- 02_PRECOMPS (depth 0) -->
+    <rect x="16" y="198" width="8" height="8" rx="2" fill="#4aa44c"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="37" y="202"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="51" y="202"/>
+    <text x="62" y="205" fill="#b8bcc2" font-weight="600" font-size="11">02_PRECOMPS</text>
+
+    <!-- wip (depth 1) -->
+    <rect x="16" y="222" width="8" height="8" rx="2" fill="#5c7cd6"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="55" y="226"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="69" y="226"/>
+    <text x="80" y="229" fill="#b8bcc2" font-weight="600" font-size="11">wip</text>
+
+    <!-- rigs maybe (depth 2) -->
+    <rect x="16" y="246" width="8" height="8" rx="2" fill="#3da2a5"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="73" y="250"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="87" y="250"/>
+    <text x="98" y="253" fill="#b8bcc2" font-weight="600" font-size="11">rigs maybe</text>
+
+    <!-- Robot_Rig_v3 (depth 3, checked) -->
+    <rect x="16" y="270" width="8" height="8" rx="2" fill="#7a8fe0"/>
+    <use xlink:href="#target-icon" href="#target-icon" x="91" y="274" stroke="#4d9fff"/>
+    <use xlink:href="#checkbox-on" href="#checkbox-on" x="115" y="274"/>
+    <use xlink:href="#type-comp" href="#type-comp" x="135" y="274"/>
+    <text x="154" y="278">Robot_Rig_v3</text>
+
+    <!-- 03_ASSETS (depth 0) -->
+    <rect x="16" y="294" width="8" height="8" rx="2" fill="#d6c05c"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="37" y="298"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="51" y="298"/>
+    <text x="62" y="301" fill="#b8bcc2" font-weight="600" font-size="11">03_ASSETS</text>
+
+    <!-- logo_mark.png (depth 1, graphics) -->
+    <rect x="16" y="318" width="8" height="8" rx="2" fill="#8e2c9a"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="55" y="322"/>
+    <use xlink:href="#type-graphics" href="#type-graphics" x="75" y="322"/>
+    <text x="94" y="326" fill="#9a9a9a">logo_mark.png</text>
+
+    <!-- robo_texture.png (depth 1, graphics) -->
+    <rect x="16" y="342" width="8" height="8" rx="2" fill="#d9b48f"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="55" y="346"/>
+    <use xlink:href="#type-graphics" href="#type-graphics" x="75" y="346"/>
+    <text x="94" y="350" fill="#9a9a9a">robo_texture.png</text>
+
+    <!-- Robot_Turntable.mp4 (depth 1, media) -->
+    <rect x="16" y="366" width="8" height="8" rx="2" fill="#e08bb0"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="55" y="370"/>
+    <use xlink:href="#type-media" href="#type-media" x="75" y="370"/>
+    <text x="94" y="374" fill="#9a9a9a">Robot_Turntable.mp4</text>
+
+    <!-- Robot_Model.fbx (depth 1, 3D) -->
+    <rect x="16" y="390" width="8" height="8" rx="2" fill="#a89677"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="55" y="394"/>
+    <use xlink:href="#type-threed" href="#type-threed" x="75" y="394"/>
+    <text x="94" y="398" fill="#9a9a9a">Robot_Model.fbx</text>
+
+    <!-- 04_CHARACTER (depth 0) -->
+    <rect x="16" y="414" width="8" height="8" rx="2" fill="#7f452a"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="37" y="418"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="51" y="418"/>
+    <text x="62" y="421" fill="#b8bcc2" font-weight="600" font-size="11">04_CHARACTER</text>
+
+    <!-- swap-source group -->
+    <rect x="16" y="432" width="288" height="68" rx="6" fill="#2f3438" fill-opacity="0.35" stroke="#3a3a3a"/>
+    <line x1="16" y1="454" x2="304" y2="454" stroke="#3a3a3a"/>
+
+    <!-- Character_Rig (depth 1, swap source head) -->
+    <rect x="16" y="438" width="8" height="8" rx="2" fill="#6a7fd9"/>
+    <use xlink:href="#chevron-down" href="#chevron-down" x="55" y="442"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="71" y="442"/>
+    <use xlink:href="#type-design" href="#type-design" x="91" y="442"/>
+    <text x="110" y="446">Character_Rig</text>
+    <rect x="207" y="434" width="94" height="18" rx="3" fill="none" stroke="#4d9fff"/>
+    <text x="254" y="446.5" fill="#4d9fff" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.4">SWAP SOURCE</text>
+
+    <!-- Layer_Body (depth 2, checked) -->
+    <rect x="16" y="462" width="8" height="8" rx="2" fill="#9b8fd6"/>
+    <use xlink:href="#target-icon" href="#target-icon" x="73" y="466" stroke="#4d9fff"/>
+    <use xlink:href="#checkbox-on" href="#checkbox-on" x="97" y="466"/>
+    <use xlink:href="#type-design" href="#type-design" x="117" y="466"/>
+    <text x="136" y="470">Layer_Body</text>
+
+    <!-- Layer_Eyes (depth 2) -->
+    <rect x="16" y="486" width="8" height="8" rx="2" fill="#b3a8e0"/>
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="73" y="490"/>
+    <use xlink:href="#type-design" href="#type-design" x="93" y="490"/>
+    <text x="112" y="494" fill="#9a9a9a">Layer_Eyes</text>
+  </g>
+
+  <!-- Merge Option -->
+  <use xlink:href="#checkbox-on" href="#checkbox-on" x="14.5" y="534"/>
+  <text x="26" y="538" fill="#9a9a9a" font-size="11">Try to merge with current project</text>
+  <rect x="196" y="526" width="16" height="16" rx="4" fill="#232323" stroke="#444"/>
+  <g transform="translate(198,528) scale(0.5)" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+    <text x="12" y="18.5" font-size="13" font-weight="bold" text-anchor="middle" fill="#9a9a9a" stroke="none">?</text>
+  </g>
+
+  <!-- Import Button & Status -->
+  <rect x="8" y="558" width="304" height="30" rx="5" fill="#4d9fff"/>
+  <text x="160" y="578" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Import Selected (2)</text>
+  <circle cx="14" cy="602" r="5" fill="none" stroke="#444" stroke-width="2"/>
+  <path d="M14,597 a5,5 0 0 1 5,5" fill="none" stroke="#4d9fff" stroke-width="2" stroke-linecap="round"/>
+  <text x="26" y="606" fill="#9a9a9a" font-size="11">Merging into existing folders…</text>
+
+  <!-- Five zones (transparent area - text must read on the page's own light bg) -->
+  <g font-size="14" font-weight="600" fill="#1a1a1a">
+    <line x1="320" y1="29" x2="345" y2="29" stroke="#8e8e8e"/>
+    <text x="352" y="34">1 · File Picker</text>
+
+    <line x1="320" y1="80" x2="345" y2="80" stroke="#8e8e8e"/>
+    <text x="352" y="85">2 · Search &amp; Filters</text>
+
+    <line x1="320" y1="314" x2="345" y2="314" stroke="#8e8e8e"/>
+    <text x="352" y="319">3 · Asset Tree</text>
+
+    <line x1="320" y1="534" x2="345" y2="534" stroke="#8e8e8e"/>
+    <text x="352" y="539">4 · Merge Option</text>
+
+    <line x1="320" y1="578" x2="345" y2="578" stroke="#8e8e8e"/>
+    <text x="352" y="583">5 · Import Button</text>
+    <text x="368" y="602">&amp; Status</text>
+  </g>
+</svg>

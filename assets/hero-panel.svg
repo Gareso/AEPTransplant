@@ -1,0 +1,85 @@
+<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <g id="chevron-down"><path d="M-4,-1.5 L0,2.5 L4,-1.5" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <path id="folder-icon" d="M-6,-4.7 H-1.3 L0.3,-3 H6 C6.6,-3 7,-2.5 7,-2 V4.3 C7,4.9 6.6,5.3 6,5.3 H-6 C-6.6,5.3 -7,4.9 -7,4.3 V-3.7 C-7,-4.3 -6.6,-4.7 -6,-4.7 Z" fill="#9a9a9a"/>
+    <g id="type-comp"><g transform="scale(0.5) translate(-12,-12)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="12 2 2 7 12 12 22 7"/>
+      <polyline points="2 17 12 22 22 17"/>
+      <polyline points="2 12 12 17 22 12"/>
+    </g></g>
+    <g id="target-icon"><g transform="scale(0.5417) translate(-12,-12)" fill="none" stroke-width="2"><circle cx="12" cy="12" r="7"/><line x1="12" y1="1" x2="12" y2="23"/><line x1="1" y1="12" x2="23" y2="12"/></g></g>
+    <g id="checkbox-off"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#1a1a1a" stroke="#8a8a8a" stroke-width="1.3"/></g>
+    <g id="checkbox-on"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#4d9fff"/><path d="M-3.3,0.3 L-1.3,2.3 L3.3,-2.7" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <linearGradient id="arrowGrad" x1="0.065" y1="-0.47" x2="0.82" y2="1.2">
+      <stop offset=".05" stop-color="#3b2275"/>
+      <stop offset=".79" stop-color="#6678d1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Source panel -->
+  <rect x="40" y="34" width="350" height="252" rx="10" fill="#2b2b2b" stroke="#444"/>
+  <text x="60" y="58" fill="#9a9a9a" font-size="13">Colleague_Rodrigo.aep</text>
+  <line x1="40" y1="70" x2="390" y2="70" stroke="#3a3a3a"/>
+
+  <g font-size="13" fill="#e0e0e0">
+    <use xlink:href="#chevron-down" href="#chevron-down" x="73" y="90"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="87" y="90"/>
+    <text x="98" y="94" fill="#b8bcc2" font-weight="600" font-size="11">wip</text>
+
+    <use xlink:href="#chevron-down" href="#chevron-down" x="91" y="114"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="105" y="114"/>
+    <text x="116" y="118" fill="#b8bcc2" font-weight="600" font-size="11">rigs maybe</text>
+
+    <use xlink:href="#target-icon" href="#target-icon" x="127" y="138" stroke="#4d9fff"/>
+    <use xlink:href="#checkbox-on" href="#checkbox-on" x="151" y="138"/>
+    <use xlink:href="#type-comp" href="#type-comp" x="171" y="138"/>
+    <text x="190" y="142">Robot_Rig_v3</text>
+
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="91" y="162"/>
+    <use xlink:href="#type-comp" href="#type-comp" x="111" y="162"/>
+    <text x="130" y="166" fill="#9a9a9a">Comp 1</text>
+
+    <use xlink:href="#chevron-down" href="#chevron-down" x="73" y="186"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="87" y="186"/>
+    <text x="98" y="190" fill="#b8bcc2" font-weight="600" font-size="11">old stuff</text>
+
+    <use xlink:href="#checkbox-off" href="#checkbox-off" x="91" y="210"/>
+    <text x="111" y="214" fill="#9a9a9a">robo_texture.png</text>
+  </g>
+
+  <rect x="60" y="240" width="310" height="30" rx="6" fill="#4d9fff"/>
+  <text x="215" y="260" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Import Selected (1)</text>
+
+  <!-- Arrow -->
+  <g transform="translate(400,160) scale(0.351)"><path fill="url(#arrowGrad)" d="M3.18,-23.29 h224.57 c2.56,0,4.64,-2.09,4.61,-4.66 l-.23,-17.49 c-.03,-2.85,3.41,-4.29,5.42,-2.28 l46.42,45.86 c1.24,1.24,1.24,3.25,0,4.49 l-45.37,44.64 c-1.99,1.99,-5.39,.6,-5.42,-2.21 l-.24,-17.21 c-.03,-2.53,-2.08,-4.56,-4.61,-4.56 H3.18 c-1.75,0,-3.18,1.42,-3.18,3.18 V-20.11 c0,-1.75,1.42,-3.18,3.18,-3.18 Z"/></g>
+  <text x="450" y="142" fill="#8e8e8e" font-size="12" text-anchor="middle">dependencies only</text>
+
+  <!-- Destination panel -->
+  <rect x="510" y="34" width="350" height="252" rx="10" fill="#2b2b2b" stroke="#444"/>
+  <text x="530" y="58" fill="#9a9a9a" font-size="13">Your Project</text>
+  <line x1="510" y1="70" x2="860" y2="70" stroke="#3a3a3a"/>
+
+  <g font-size="13" fill="#e0e0e0">
+    <use xlink:href="#chevron-down" href="#chevron-down" x="543" y="90"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="557" y="90"/>
+    <text x="568" y="94" fill="#b8bcc2" font-weight="600" font-size="11">01_MAIN</text>
+
+    <use xlink:href="#chevron-down" href="#chevron-down" x="543" y="114"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="557" y="114"/>
+    <text x="568" y="118" fill="#b8bcc2" font-weight="600" font-size="11">02_PRECOMPS</text>
+  </g>
+
+  <rect x="558" y="126" width="284" height="30" rx="6" fill="#2f3438" stroke="#4d9fff"/>
+  <use xlink:href="#type-comp" href="#type-comp" x="582" y="141" stroke="#4d9fff"/>
+  <text x="600" y="145" fill="#ffffff" font-size="13" font-weight="600">Robot_Rig_v3</text>
+  <text x="700" y="145" fill="#4d9fff" font-size="10">merged in</text>
+
+  <g font-size="13" fill="#e0e0e0">
+    <use xlink:href="#chevron-down" href="#chevron-down" x="543" y="178"/>
+    <use xlink:href="#folder-icon" href="#folder-icon" x="557" y="178"/>
+    <text x="568" y="182" fill="#b8bcc2" font-weight="600" font-size="11">03_ASSETS</text>
+  </g>
+
+  <rect x="530" y="240" width="310" height="26" rx="6" fill="none" stroke="#3a3a3a"/>
+  <text x="685" y="257" fill="#8e8e8e" font-size="11" text-anchor="middle">folded into existing folders</text>
+</svg>

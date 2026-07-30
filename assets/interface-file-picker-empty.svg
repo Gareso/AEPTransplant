@@ -1,0 +1,10 @@
+<svg viewBox="0 0 360 50" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+  <rect width="360" height="50" fill="#2b2b2b"/>
+  <path d="M13,8 H36 V30 H13 Q8,30 8,25 V13 Q8,8 13,8 Z" fill="#232323" stroke="#444"/>
+  <g transform="translate(22,19) scale(0.5833)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle r="9" /><polyline points="0,-5 0,0 4,2" />
+  </g>
+  <path d="M36,8 H196 Q201,8 201,13 V25 Q201,30 196,30 H36 Z" fill="#232323" stroke="#444"/>
+  <text x="46" y="23" fill="#e0e0e0" font-size="12">→ Choose AEP, PSD or AI…</text>
+  <text x="212" y="23" fill="#6f6f6f" font-size="13" font-style="italic">No project selected</text>
+</svg>

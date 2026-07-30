@@ -4,7 +4,7 @@
 
 <h2 id="browse-import">Browse & Import</h2>
 
-> 📸 *[Image needed: GIF or sequence showing: choose file → tree appears → check items → Import]*
+<img src="assets/features-browse-import.svg" alt="Choose a file, check items, import" class="doc-illustration bare wide" />
 
 The core workflow:
 
@@ -23,13 +23,58 @@ AEP Transplant extracts only the checked items and their real dependencies. Ever
 | `.psd` / `.psb` | Layers of the document | Selected layers as individual footage items |
 | `.ai` | Layers / artboards of the document | Selected layers as individual footage items |
 
-> The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then manually delete that folder.
+> The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then manually delete that folder. See [Undo Behavior](features.md#undo) for the full breakdown.
+
+---
+
+<h2 id="search-filter">Search & Filter</h2>
+
+<img src="assets/features-search-filter.svg" alt="OPT/ALT + click a filter to solo it" class="doc-illustration bare modal" />
+
+**Search** filters the asset tree by name (case-insensitive substring). Results update live as you type.
+
+**Filter checkboxes** show or hide items by category:
+
+| Filter | Covers |
+| ------ | ------ |
+| Comps | After Effects compositions |
+| Media | Video and audio files |
+| Graphics | Image files (PNG, JPG, EXR, TGA, SVG…) |
+| Design | Layered design files (PSD, AI, PDF, EPS…) |
+| 3D | 3D asset files (C4D, OBJ, FBX, GLTF…) |
+
+**OPT/ALT + click** a filter checkbox to solo it, showing only that category and hiding the rest. OPT/ALT + click again to restore the previous state.
+
+Filter preferences are saved between sessions.
+
+---
+
+<h2 id="target-picker">Target Picker</h2>
+
+When an item is checked, a **crosshair icon** appears next to it:
+
+<img src="assets/features-targeticon.svg" alt="The Target Icon" class="doc-illustration bare icon" />
+
+Click it to open the Target Picker, a modal that lets you manually point that imported item at a specific existing item or folder in your current project, overriding the automatic name-based merge matching.
+
+<img src="assets/features-target-picker.svg" alt="The Target Picker modal" class="doc-illustration bare modal" />
+
+| Target type | What happens at import |
+| ----------- | ---------------------- |
+| **Comp or footage item** | Replaces the targeted item. Layers and expressions referencing it update automatically. |
+| **Folder** | Places the imported item into that folder instead of wherever the merge logic would put it. |
+
+Use the search bar and filter checkboxes inside the picker to quickly find the right target in a large project. OPT/ALT + click any folder arrow to collapse or expand all folders at once.
+
+Once a target is set, the crosshair icon turns **blue**. OPT/ALT + click it to clear the assignment.
+
+<img src="assets/features-targeticon_active.svg" alt="The Target Icon" class="doc-illustration bare icon" />
 
 ---
 
 <h2 id="smart-merge">Smart Merge</h2>
 
-> 📸 *[Image needed: GIF showing imported content folding into existing folders instead of creating a new root folder]*
+<img src="assets/interface-merge-option.svg" alt="An imported Bitmaps folder merging into an existing Images folder" class="doc-illustration bare modal" />
 
 Enable **Try to merge with current project** before importing to fold the incoming content into your existing folder structure.
 
@@ -55,9 +100,47 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 ---
 
+<h2 id="folder-name-settings">Folder Name Settings</h2>
+
+<img src="assets/features-folder-name-settings.svg" alt="Folder Name Settings window" class="doc-illustration bare modal" />
+
+The "similar name" pass above is driven by editable word lists, one per asset type. Open **Folder Name Settings…** from the panel's context menu (right-click the panel, or its **☰** menu) to customize them.
+
+| Control | Description |
+| ------- | ----------- |
+| **Language preset** | Swaps every list for a language's own common folder names. English, Spanish, French, German, Italian, Portuguese, Japanese, Korean, Chinese, and Russian are built in. |
+| **Synonym fields** | One comma-separated list per asset type (Images, Footage, Audio, Precomps, and more). Add or remove words freely. |
+| **Restore Defaults** | Resets every list back to the selected language's built-in defaults. |
+| **Save** | Applies your changes immediately, no restart needed. |
+
+> Changes apply to every merge afterward, in any project. There's no need to keep the settings window open.
+
+---
+
+<h2 id="swap-source">Swap Source</h2>
+
+<img src="assets/features-swap-source-main.svg" alt="Swap Source replacing every layer of a file across the project in one action" class="doc-illustration bare modal" />
+
+A **SWAP SOURCE** row appears above the individual layer items of any PSD or AI file, marked with a blue badge. This includes PSD/AI files loaded directly *and* PSD/AI files nested inside an `.aep` you loaded, since AEP Transplant surfaces their layers the same way either way.
+
+**Swap Source** lets you replace every layer of a source file across your entire current project in one action, instead of updating each layer one by one. This is perfect for re-skinning a character rig or updating artwork across a complex project.
+
+**How it works:**
+
+1. Check the **SWAP SOURCE** row (and/or its individual layer rows).
+2. Click the **crosshair icon** that appears next to the checked row to open the [Target Picker](features.md#target-picker).
+3. In the picker, select the existing footage item in your current project that you want to replace.
+4. Click **Import Selected**.
+
+AEP Transplant matches the source file's layers to the targeted item's layers by name, replaces each one, and handles any layers that don't find a match by parking them in a "no match" folder.
+
+> OPT/ALT + click the crosshair icon to clear a target assignment.
+
+---
+
 <h2 id="external-assets">External Assets</h2>
 
-> 📸 *[Image needed: screenshot of the External Assets Found dialog]*
+<img src="assets/features-external-assets.svg" alt="The External Assets Found dialog" class="doc-illustration bare modal" />
 
 If the items you're importing use footage stored outside your current project's folder (a colleague's drive, a different job folder, anywhere not under your project), AEP Transplant asks what to do before finishing the import:
 
@@ -72,79 +155,23 @@ Copies land in a new folder named `<source file> - AEP Transplant`, created next
 
 ---
 
-<h2 id="swap-source">Swap Source</h2>
-
-> 📸 *[Image needed: screenshot of a SWAP SOURCE row in the tree panel, and/or GIF showing the replace-all-layers flow]*
-
-When you load a PSD or AI file, a **SWAP SOURCE** row appears above the file's individual layer items, marked with a blue badge.
-
-**Swap Source** lets you replace every layer of a source file across your entire current project in one action, instead of updating each layer one by one. This is perfect for re-skinning a character rig or updating artwork across a complex project.
-
-**How it works:**
-
-1. Check the **SWAP SOURCE** row (and/or its individual layer rows).
-2. Click the **crosshair icon** that appears next to the checked row to open the Target Picker.
-3. In the picker, select the existing footage item in your current project that you want to replace.
-4. Click **Import Selected**.
-
-AEP Transplant matches the source file's layers to the targeted item's layers by name, replaces each one, and handles any layers that don't find a match by parking them in a "no match" folder.
-
-> OPT/ALT + click the crosshair icon to clear a target assignment.
-
----
-
-<h2 id="target-picker">Target Picker</h2>
-
-> 📸 *[Image needed: screenshot of the Target Picker modal overlaid on the panel]*
-
-When an item is checked, a **crosshair icon** appears next to it. Click it to open the Target Picker, a modal that lets you manually point that imported item at a specific existing item or folder in your current project, overriding the automatic name-based merge matching.
-
-| Target type | What happens at import |
-| ----------- | ---------------------- |
-| **Comp or footage item** | Replaces the targeted item. Layers and expressions referencing it update automatically. |
-| **Folder** | Places the imported item into that folder instead of wherever the merge logic would put it. |
-
-Use the search bar and filter checkboxes inside the picker to quickly find the right target in a large project. OPT/ALT + click any folder arrow to collapse or expand all folders at once.
-
-Once a target is set, the crosshair icon turns **blue**. OPT/ALT + click it to clear the assignment.
-
----
-
-<h2 id="search-filter">Search & Filter</h2>
-
-> 📸 *[Image needed: screenshot of search and filter bar]*
-
-**Search** filters the asset tree by name (case-insensitive substring). Results update live as you type.
-
-**Filter checkboxes** show or hide items by category:
-
-| Filter | Covers |
-| ------ | ------ |
-| Comps | After Effects compositions |
-| Media | Video and audio files |
-| Graphics | Image files (PNG, JPG, EXR, TGA, SVG…) |
-| Design | Layered design files (PSD, AI, PDF, EPS…) |
-| 3D | 3D asset files (C4D, OBJ, FBX, GLTF…) |
-
-**OPT/ALT + click** a filter checkbox to solo it, showing only that category and hiding the rest. OPT/ALT + click again to restore the previous state.
-
-Filter preferences are saved between sessions.
-
----
-
 <h2 id="update-watcher">Update Watcher</h2>
 
-> 📸 *[Image needed: screenshot showing the blue dot on the Recent Projects button and next to the file name]*
+<img src="assets/features-update-watcher.svg" alt="Blue dots indicating updated files" class="doc-illustration bare modal" />
 
 AEP Transplant watches the files you've worked with and tells you when they change:
 
 - A **blue dot on the clock button** means one or more projects in your recent list have been saved since you last loaded them here.
 - A **blue dot next to the loaded file name** means the currently open source file has changed on disk since you loaded it.
-- Blue dots **inside the Recent Projects list** appear on individual entries that have updated.
+- Blue dots **inside the [Recent Projects](interface.md#recent-projects) list** appear on individual entries that have updated.
+
+<img src="assets/features-reload.svg" alt="Reload button" class="doc-illustration bare modal" />
 
 Click **↺ Reload** to re-read the current file from disk and pick up any changes.
 
 This is especially useful on shared projects: if a teammate updates an `.aep` you're sourcing from, the dot lets you know before you import stale content.
+
+> Reload only refreshes what's showing in the tree. It has no effect on what actually gets imported: every import already reads the file's current state from disk, whether or not you've clicked Reload first.
 
 ---
 
