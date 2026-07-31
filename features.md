@@ -108,7 +108,7 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 <h2 id="folder-merge-settings">Folder Merge Settings</h2>
 
-<img src="assets/features-folder-name-settings.svg" alt="Folder Merge Settings window" class="doc-illustration bare modal" />
+<img src="assets/features-folder-merge-settings.svg" alt="Folder Merge Settings window" class="doc-illustration bare modal" />
 
 This window controls how folders are matched during a merge: the matching strategy, and the word lists that drive the "similar name" pass above. Open **Folder Merge Settings…** from the panel's context menu (right-click the panel, or its **☰** menu).
 
