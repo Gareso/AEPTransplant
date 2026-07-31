@@ -25,6 +25,12 @@ AEP Transplant extracts only the checked items and their real dependencies. Ever
 
 > The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then manually delete that folder. See [Undo Behavior](features.md#undo) for the full breakdown.
 
+### Missing Source Files
+
+<img src="assets/features-missing-source.svg" alt="A footage item with a missing source file, dimmed with a crossed-out icon" class="doc-illustration bare compact" />
+
+If a footage item's source file can't be found on this machine, its row is dimmed and its icon crossed out, with a tooltip explaining why. Its checkbox is disabled: importing it directly would only bring in missing footage. It can still come in as a real dependency of a comp you do select, since After Effects resolves that on its own at import time.
+
 ---
 
 <h2 id="search-filter">Search & Filter</h2>

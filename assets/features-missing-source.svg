@@ -1,0 +1,43 @@
+<svg viewBox="0 0 360 138" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <g id="ms-chevron-down"><path d="M-4,-1.5 L0,2.5 L4,-1.5" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <path id="ms-folder-icon" d="M-6,-4.7 H-1.3 L0.3,-3 H6 C6.6,-3 7,-2.5 7,-2 V4.3 C7,4.9 6.6,5.3 6,5.3 H-6 C-6.6,5.3 -7,4.9 -7,4.3 V-3.7 C-7,-4.3 -6.6,-4.7 -6,-4.7 Z" fill="#9a9a9a"/>
+
+    <!-- Real media type-icon path from client/main.js's TYPE_ICON_SVG, re-centered/scaled same as interface-asset-tree.svg -->
+    <g id="ms-type-media"><g transform="scale(0.5) translate(-12,-12)" fill="#9a9a9a" fill-rule="evenodd">
+      <path d="M2 3h20v18H2V3zm8 5v8l6-4-6-4z"/>
+    </g></g>
+
+    <g id="ms-checkbox-off"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#1a1a1a" stroke="#8a8a8a" stroke-width="1.3"/></g>
+  </defs>
+
+  <rect width="360" height="138" fill="#ffffff"/>
+  <rect x="8" y="8" width="344" height="122" rx="6" fill="#232323" stroke="#3a3a3a"/>
+
+  <g font-size="12" fill="#e0e0e0">
+    <!-- 02_PRECOMPS (folder header) -->
+    <rect x="16" y="16" width="8" height="8" rx="2" fill="#4aa44c"/>
+    <use xlink:href="#ms-chevron-down" href="#ms-chevron-down" x="37" y="20"/>
+    <use xlink:href="#ms-folder-icon" href="#ms-folder-icon" x="51" y="20"/>
+    <text x="62" y="23" fill="#b8bcc2" font-weight="600" font-size="11">02_PRECOMPS</text>
+
+    <!-- BG_Clean.mov (normal item, for contrast) -->
+    <rect x="16" y="40" width="8" height="8" rx="2" fill="#3da2a5"/>
+    <use xlink:href="#ms-checkbox-off" href="#ms-checkbox-off" x="55" y="44"/>
+    <use xlink:href="#ms-type-media" href="#ms-type-media" x="75" y="44"/>
+    <text x="94" y="48" fill="#9a9a9a">BG_Clean.mov</text>
+
+    <!-- Tooltip, as it appears on hover -->
+    <rect x="55" y="72" width="130" height="22" rx="4" fill="#232323" stroke="#444"/>
+    <text x="62" y="86" fill="#e0e0e0" font-size="11">Source is missing</text>
+
+    <!-- Old_BG.mov (missing source: dimmed text, disabled checkbox, crossed-out icon) -->
+    <rect x="16" y="104" width="8" height="8" rx="2" fill="#a89677"/>
+    <use xlink:href="#ms-checkbox-off" href="#ms-checkbox-off" x="55" y="108" opacity="0.5"/>
+    <g transform="translate(75,108) scale(0.5)" fill="#6b6b6b" fill-rule="evenodd">
+      <path d="M2 3h20v18H2V3zm8 5v8l6-4-6-4z" transform="translate(-12,-12)"/>
+    </g>
+    <line x1="67" y1="115" x2="83" y2="101" stroke="#6b6b6b" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="94" y="112" fill="#9a9a9a">Old_BG.mov</text>
+  </g>
+</svg>
