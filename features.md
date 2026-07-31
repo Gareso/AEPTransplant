@@ -88,11 +88,15 @@ A folder that finds no match of its own doesn't strand what's inside it. AEP Tra
 
 If a same-named item already exists in your project, you'll be prompted:
 
+<img src="assets/features-conflict-dialog.svg" alt="The Item Already Exists dialog" class="doc-illustration bare modal" />
+
 | Option | What it does |
 | ------ | ------------ |
 | **Replace** | Swaps the existing item with the incoming one. Layers and expressions that reference it automatically point to the new version. |
 | **Use Current** | Keeps your existing item and discards the incoming duplicate. |
 | **Keep Both** | Imports the incoming item alongside the existing one (name is suffixed). |
+
+Check **Apply to all** before choosing an option to use that same choice for every remaining conflict in this import, instead of being prompted again for each one.
 
 The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores everything to a labeled folder at the project root). The import that preceded it is separate and not undoable.
 
@@ -147,7 +151,7 @@ If the items you're importing use footage stored outside your current project's 
 | Option | What it does |
 | ------ | ------------ |
 | **Copy to Project** | Copies the external files into your project folder and relinks the imported items to the copies. |
-| **Keep Original** | Leaves the imported items linked to their current location. |
+| **Leave in Place** | Leaves the imported items linked to their current location. |
 
 Copies land in a new folder named `<source file> - AEP Transplant`, created next to wherever your project already keeps most of its footage. Image sequences are copied as a whole, every frame included. If you import from the same source file again later, previously copied assets are reused instead of duplicated.
 
