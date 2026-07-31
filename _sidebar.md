@@ -7,7 +7,7 @@
   * [Search & Filter](features.md#search-filter)
   * [Target Picker](features.md#target-picker)
   * [Smart Merge](features.md#smart-merge)
-  * [Folder Name Settings](features.md#folder-name-settings)
+  * [Folder Merge Settings](features.md#folder-merge-settings)
   * [Swap Source](features.md#swap-source)
   * [External Assets](features.md#external-assets)
   * [Update Watcher](features.md#update-watcher)

@@ -60,13 +60,13 @@ For any PSD or AI file, a **SWAP SOURCE** row appears above its layer items, whe
 
 ## Merge Option
 
-<img src="assets/interface-merge-option.svg" alt="The merge checkbox and Folder Name Settings button" class="doc-illustration bare compact" />
+<img src="assets/interface-merge-option.svg" alt="The merge checkbox and Folder Merge Settings button" class="doc-illustration bare compact" />
 
 A single checkbox: **Try to merge with current project**.
 
 When checked, imported content is folded into your existing folder structure: matching folders are combined rather than creating a new top-level import folder. See [Smart Merge](features.md#smart-merge) for the full behavior.
 
-The small folder icon next to it opens [Folder Name Settings](features.md#folder-name-settings), where you customize the word lists that drive similar-name matching.
+The small folder icon next to it opens [Folder Merge Settings](features.md#folder-merge-settings), where you choose the folder-matching strategy and customize the word lists that drive similar-name matching.
 
 This preference is saved between sessions.
 

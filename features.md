@@ -84,6 +84,8 @@ With merge on, AEP Transplant matches each imported folder against your current 
 2. **Similar name.** AEP Transplant recognizes common naming variations: ordering prefixes and suffixes are ignored (`a.precomps` matches `02_PRECOMPS`), and common naming dialects count as the same folder (`Images` / `Bitmaps` / `Graphics` / `PNGs`, `Footage` / `Videos` / `Movies`, `Audio` / `Music` / `SFX`, `Precomps` / `Pre Comps` / `Precompositions`, and more).
 3. **Content.** If nothing matches by name at all, a folder whose contents already exist somewhere in your project is combined into wherever those live.
 
+How the first two passes rank against each other is configurable in [Folder Merge Settings](features.md#folder-merge-settings): by default an exact name match wins wherever it sits in your project, but you can instead favor folders higher in your structure — see the **Folder merge** option there.
+
 A folder that finds no match of its own doesn't strand what's inside it. AEP Transplant keeps looking one level deeper: subfolders hunt for their own match independently, so a source project that nests everything under one project-named folder still merges cleanly instead of landing as a single unmatched block. Whatever remains after that still gets carried into the closest matched folder, so nothing is left behind unless truly nothing in that branch matches anything in your project.
 
 If a same-named item already exists in your project, you'll be prompted:
@@ -104,17 +106,18 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 ---
 
-<h2 id="folder-name-settings">Folder Name Settings</h2>
+<h2 id="folder-merge-settings">Folder Merge Settings</h2>
 
-<img src="assets/features-folder-name-settings.svg" alt="Folder Name Settings window" class="doc-illustration bare modal" />
+<img src="assets/features-folder-name-settings.svg" alt="Folder Merge Settings window" class="doc-illustration bare modal" />
 
-The "similar name" pass above is driven by editable word lists, one per asset type. Open **Folder Name Settings…** from the panel's context menu (right-click the panel, or its **☰** menu) to customize them.
+This window controls how folders are matched during a merge: the matching strategy, and the word lists that drive the "similar name" pass above. Open **Folder Merge Settings…** from the panel's context menu (right-click the panel, or its **☰** menu).
 
 | Control | Description |
 | ------- | ----------- |
+| **Folder merge** | Picks the matching strategy. **Favor exact folder names** (default): an exact name match always wins, wherever it sits; synonyms and similar names are used only when no exact match exists. **Favor project root**: a matching folder higher up in your project (exact name, synonym, or similar name) wins over an exact name buried deeper. |
 | **Language preset** | Swaps every list for a language's own common folder names. English, Spanish, French, German, Italian, Portuguese, Japanese, Korean, Chinese, and Russian are built in. |
 | **Synonym fields** | One comma-separated list per asset type (Images, Footage, Audio, Precomps, and more). Add or remove words freely. |
-| **Restore Defaults** | Resets every list back to the selected language's built-in defaults. |
+| **Restore Defaults** | Resets every list back to the selected language's built-in defaults (the Folder merge choice is left alone). |
 | **Save** | Applies your changes immediately, no restart needed. |
 
 > Changes apply to every merge afterward, in any project. There's no need to keep the settings window open.
