@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 481 531">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 481 551">
   <defs>
     <style>
       .st0 {
@@ -96,9 +96,13 @@
         font-size: 10px;
         isolation: isolate;
       }
+
+      .st16 {
+        font-style: italic;
+      }
     </style>
   </defs>
-  <rect class="st11" x=".5" y=".5" width="480" height="530" rx="10" ry="10"/>
+  <rect class="st11" x=".5" y=".5" width="480" height="550" rx="10" ry="10"/>
   <text class="st1" transform="translate(24.5 36.5)"><tspan x="0" y="0">Folder Merge Settings</tspan></text>
   <!-- Folder merge mode radios -->
   <circle class="st13" cx="31.5" cy="59.5" r="6"/>
@@ -111,36 +115,45 @@
   <line class="st7" x1="24.5" y1="81.5" x2="456.5" y2="81.5"/>
   <!-- Synonyms section header + language preset -->
   <text class="st3" transform="translate(24.5 122.5)"><tspan x="0" y="0">Folder name synonyms</tspan></text>
+  <circle class="st14" cx="171.5" cy="118.5" r="8"/>
+  <text class="st15" transform="translate(169.5 122.5)"><tspan x="0" y="0">i</tspan></text>
   <rect class="st9" x="387.5" y="104.5" width="73" height="28" rx="5" ry="5"/>
   <text class="st5" transform="translate(404.42 123.5)"><tspan x="0" y="0">English</tspan></text>
   <path class="st6" d="M445.5,118l3,2,3-2"/>
   <text class="st0" transform="translate(24.5 148.5)"><tspan x="0" y="0">When folder names don&#8217;t match exactly during a merge, AEP</tspan></text>
   <text class="st0" transform="translate(24.5 164.5)"><tspan x="0" y="0">Transplant treats these words as interchangeable.</tspan></text>
-  <!-- Always-visible scrollbar: track + thumb -->
-  <rect class="st9" x="464.5" y="182.5" width="8" height="270" rx="4" ry="4"/>
-  <path class="st10" d="M468.5,186.5h0c1.66,0,3,1.34,3,3v114c0,1.66-1.34,3-3,3h0c-1.66,0-3-1.34-3-3v-114c0-1.66,1.34-3,3-3Z"/>
-  <g>
-    <text class="st3" transform="translate(24.5 192.5)"><tspan x="0" y="0">Images</tspan></text>
-    <rect class="st9" x="24.5" y="200.5" width="426" height="28" rx="5" ry="5"/>
-    <text class="st5" transform="translate(36.5 218.5)"><tspan x="0" y="0">Bitmaps, Graphics, PNGs, Stills</tspan></text>
-    <text class="st3" transform="translate(24.5 248.5)"><tspan x="0" y="0">Footage</tspan></text>
-    <rect class="st9" x="24.5" y="256.5" width="426" height="28" rx="5" ry="5"/>
-    <text class="st5" transform="translate(36.5 274.5)"><tspan x="0" y="0">Videos, Movies, Clips</tspan></text>
-    <text class="st3" transform="translate(24.5 304.5)"><tspan x="0" y="0">Audio</tspan></text>
-    <rect class="st9" x="24.5" y="312.5" width="426" height="28" rx="5" ry="5"/>
-    <text class="st5" transform="translate(36.5 330.5)"><tspan x="0" y="0">Music, SFX, Sound</tspan></text>
-    <text class="st3" transform="translate(24.5 360.5)"><tspan x="0" y="0">Precomps</tspan></text>
-    <rect class="st8" x="24.5" y="368.5" width="426" height="28" rx="5" ry="5"/>
-    <text class="st4" transform="translate(36.5 386.5)"><tspan x="0" y="0">Pre Comps, Precompositions</tspan></text>
-    <text class="st3" transform="translate(24.5 416.5)"><tspan x="0" y="0">Assets</tspan></text>
-    <rect class="st9" x="24.5" y="424.5" width="426" height="28" rx="5" ry="5"/>
-    <text class="st5" transform="translate(36.5 442.5)"><tspan x="0" y="0">Elements, Imports</tspan></text>
+  <!-- Comma-separation note, with lightbulb icon -->
+  <g transform="translate(24.5 174) scale(.5417)" fill="none" stroke="#4d9fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+    <path d="M9 18h6"/>
+    <path d="M10 22h4"/>
   </g>
-  <line class="st7" x1=".5" y1="464.5" x2="480.5" y2="464.5"/>
-  <rect class="st9" x="24.5" y="480.5" width="130" height="26" rx="5" ry="5"/>
-  <text class="st5" transform="translate(48.54 497.5)"><tspan x="0" y="0">Restore Defaults</tspan></text>
-  <rect class="st9" x="340.5" y="480.5" width="60" height="26" rx="5" ry="5"/>
-  <text class="st5" transform="translate(356.44 497.5)"><tspan x="0" y="0">Close</tspan></text>
-  <rect class="st12" x="408.5" y="480.5" width="52" height="26" rx="5" ry="5"/>
-  <text class="st2" transform="translate(421.66 497.5)"><tspan x="0" y="0">Save</tspan></text>
+  <text class="st0 st16" transform="translate(43.5 184.5)"><tspan x="0" y="0">Use commas to separate the words in each list.</tspan></text>
+  <!-- Always-visible scrollbar: track + thumb -->
+  <rect class="st9" x="464.5" y="202.5" width="8" height="270" rx="4" ry="4"/>
+  <path class="st10" d="M468.5,206.5h0c1.66,0,3,1.34,3,3v114c0,1.66-1.34,3-3,3h0c-1.66,0-3-1.34-3-3v-114c0-1.66,1.34-3,3-3Z"/>
+  <g>
+    <text class="st3" transform="translate(24.5 212.5)"><tspan x="0" y="0">Images</tspan></text>
+    <rect class="st9" x="24.5" y="220.5" width="426" height="28" rx="5" ry="5"/>
+    <text class="st5" transform="translate(36.5 238.5)"><tspan x="0" y="0">Bitmaps, Graphics, PNGs, Stills</tspan></text>
+    <text class="st3" transform="translate(24.5 268.5)"><tspan x="0" y="0">Footage</tspan></text>
+    <rect class="st9" x="24.5" y="276.5" width="426" height="28" rx="5" ry="5"/>
+    <text class="st5" transform="translate(36.5 294.5)"><tspan x="0" y="0">Videos, Movies, Clips</tspan></text>
+    <text class="st3" transform="translate(24.5 324.5)"><tspan x="0" y="0">Audio</tspan></text>
+    <rect class="st9" x="24.5" y="332.5" width="426" height="28" rx="5" ry="5"/>
+    <text class="st5" transform="translate(36.5 350.5)"><tspan x="0" y="0">Music, SFX, Sound</tspan></text>
+    <text class="st3" transform="translate(24.5 380.5)"><tspan x="0" y="0">Precomps</tspan></text>
+    <rect class="st8" x="24.5" y="388.5" width="426" height="28" rx="5" ry="5"/>
+    <text class="st4" transform="translate(36.5 406.5)"><tspan x="0" y="0">Pre Comps, Precompositions</tspan></text>
+    <text class="st3" transform="translate(24.5 436.5)"><tspan x="0" y="0">Assets</tspan></text>
+    <rect class="st9" x="24.5" y="444.5" width="426" height="28" rx="5" ry="5"/>
+    <text class="st5" transform="translate(36.5 462.5)"><tspan x="0" y="0">Elements, Imports</tspan></text>
+  </g>
+  <line class="st7" x1=".5" y1="484.5" x2="480.5" y2="484.5"/>
+  <rect class="st9" x="24.5" y="500.5" width="130" height="26" rx="5" ry="5"/>
+  <text class="st5" transform="translate(48.54 517.5)"><tspan x="0" y="0">Restore Defaults</tspan></text>
+  <rect class="st9" x="340.5" y="500.5" width="60" height="26" rx="5" ry="5"/>
+  <text class="st5" transform="translate(356.44 517.5)"><tspan x="0" y="0">Close</tspan></text>
+  <rect class="st12" x="408.5" y="500.5" width="52" height="26" rx="5" ry="5"/>
+  <text class="st2" transform="translate(421.66 517.5)"><tspan x="0" y="0">Save</tspan></text>
 </svg>
