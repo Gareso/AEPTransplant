@@ -449,3 +449,15 @@ section.cover .cover-main>p:last-child a:hover {
   margin-top: 0.5em;
   display: inline-block;
 }
+
+.markdown-section .warning-box {
+  border: 1px solid #EB6669;
+  background-color: rgba(235, 102, 105, 0.08);
+  border-radius: 4px;
+  padding: .8em 1em;
+  margin: 1em 0;
+}
+
+.markdown-section .warning-box strong {
+  color: #EB6669;
+}
