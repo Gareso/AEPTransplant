@@ -112,11 +112,11 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 #### Essential Graphics (Motion Graphics Template) Properties
 
-> **After Effects matches Essential Graphics overrides by their position in the list, not by name.** If a comp has Master Properties with keyframed overrides, adding a new Master Property anywhere except the very bottom of the list can cause After Effects to silently reassign existing keyframed overrides to the wrong property the next time that comp gets replaced.
+> **After Effects matches Essential Graphics overrides by their position in the list, not by name.** <br>If a comp has Master Properties with keyframes, adding a new Master Property anywhere except the very bottom of the list can cause After Effects to silently reassign existing keyframes to the wrong property.
 
-<div class="warning-box">⚠️ <strong>Always add new Master Properties at the bottom of the Essential Graphics panel list. Never insert one in the middle.</strong></div>
+<div class="warning-box">⚠️ <strong>To keep keyframe intact, always add new Master Properties at the bottom of the Essential Graphics panel list. Never insert one in the middle.</strong></div>
 
-This is an After Effects bug, not something AEP Transplant causes. It happens exactly in the situations this tool is built for: replacing an older comp instance with an updated one from another project. When a merge or replace changes a comp's Essential Graphics list, AEP Transplant detects it and flags it in the import summary, listing which properties were added, removed, or reordered so you know to double-check the keyframed overrides on that comp.
+This is an After Effects behavior, not something AEP Transplant causes. When a merge or replace changes a comp's Essential Graphics list, AEP Transplant detects it and flags it in the import summary, listing which properties were added, removed, or reordered so you know to double-check the keyframed overrides on that comp.
 
 This is a warning only, not an automatic fix. After Effects' scripting API exposes the names of a comp's Master Properties, but gives no way to read or repair which underlying property an existing one is actually bound to. A comp that already has scrambled overrides can't be detected or corrected after the fact, only flagged going forward.
 
