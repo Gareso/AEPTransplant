@@ -114,7 +114,7 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 > **After Effects matches Essential Graphics overrides by their position in the list, not by name.** If a comp has Master Properties with keyframed overrides, adding a new Master Property anywhere except the very bottom of the list can cause After Effects to silently reassign existing keyframed overrides to the wrong property the next time that comp gets replaced.
 
-<div class="warning-box">⚠️ <strong>Always add new Master Properties at the bottom of the Essential Graphics panel list — never insert one in the middle.</strong> Appending to the bottom is safe and never triggers this.</div>
+<div class="warning-box">⚠️ <strong>Always add new Master Properties at the bottom of the Essential Graphics panel list. Never insert one in the middle.</strong><br> Appending to the bottom is safe and never triggers this.</div>
 
 This is an After Effects bug, not something AEP Transplant causes. It happens exactly in the situations this tool is built for: replacing an older comp instance with an updated one from another project. When a merge or replace changes a comp's Essential Graphics list, AEP Transplant detects it and flags it in the import summary, listing which properties were added, removed, or reordered so you know to double-check the keyframed overrides on that comp.
 
