@@ -13,6 +13,8 @@ The core workflow:
 3. Check the items you want to import.
 4. Click **Import Selected**.
 
+<img src="assets/features-drop-target.svg" alt="The panel's empty state, inviting a file to be dropped on it" class="doc-illustration bare compact" />
+
 AEP Transplant extracts only the checked items and their real dependencies. Everything else in the source project stays behind. Footage that isn't reachable from your selection is never imported.
 
 **Supported file types:**
@@ -35,6 +37,8 @@ If a footage item's source file can't be found, its row is dimmed and its icon c
 
 <h2 id="layer-import">Layer Import</h2>
 
+<img src="assets/features-layer-import.svg" alt="A comp's layer list, with layers checked and targeted" class="doc-illustration bare compact" />
+
 Sometimes you don't want a whole comp, just a couple of layers out of it. Every comp row has a **`>`** button on its right that opens that comp's layer list, with a breadcrumb at the top to get back.
 
 Layers check on and off like anything else in the tree, and the same search and category filters apply to them. Back in the main tree, the comp's own checkbox shows a **dash** while only some of its layers are picked, a **tick** when all of them are. Ticking every layer one by one is the same request as ticking the comp, so it collapses back to a plain whole-comp import.
@@ -50,6 +54,8 @@ Check a layer and the same **crosshair icon** appears as on any other row. Here 
 Copied layers land at the top of the destination comp, keeping their original stacking order, and their parenting and track mattes are rebuilt after the move.
 
 #### What comes with a layer
+
+<img src="assets/features-layer-dependencies.svg" alt="The Layer Import Dependencies dialog" class="doc-illustration bare modal" />
 
 A layer is rarely self-contained. Before importing, the panel shows what else has to come with your selection, grouped by the layer that needs it, and lets you decide:
 
