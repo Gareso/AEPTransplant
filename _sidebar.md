@@ -4,6 +4,7 @@
   * [Interface](interface.md#interface)
 * [Features](features.md#features)
   * [Browse & Import](features.md#browse-import)
+  * [Layer Import](features.md#layer-import)
   * [Search & Filter](features.md#search-filter)
   * [Target Picker](features.md#target-picker)
   * [Smart Merge](features.md#smart-merge)

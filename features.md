@@ -8,7 +8,7 @@
 
 The core workflow:
 
-1. Click **→ Choose AEP, PSD or AI…** and pick a source file.
+1. Click **→ Choose AEP, PSD or AI…** and pick a source file, or drag one straight onto the panel.
 2. The panel reads the file and displays its full folder/asset structure, no need to open it in After Effects.
 3. Check the items you want to import.
 4. Click **Import Selected**.
@@ -30,6 +30,50 @@ AEP Transplant extracts only the checked items and their real dependencies. Ever
 <img src="assets/features-missing-source.svg" alt="A footage item with a missing source file, dimmed with a crossed-out icon" class="doc-illustration bare compact" />
 
 If a footage item's source file can't be found, its row is dimmed and its icon crossed out, with a tooltip explaining why. Its checkbox is disabled: importing it directly would only bring in missing footage. It can still come in as a real dependency of a comp you do select, since After Effects resolves that on its own at import time.
+
+---
+
+<h2 id="layer-import">Layer Import</h2>
+
+Sometimes you don't want a whole comp, just a couple of layers out of it. Every comp row has a **`>`** button on its right that opens that comp's layer list, with a breadcrumb at the top to get back.
+
+Layers check on and off like anything else in the tree, and the same search and category filters apply to them. Back in the main tree, the comp's own checkbox shows a **dash** while only some of its layers are picked, a **tick** when all of them are. Ticking every layer one by one is the same request as ticking the comp, so it collapses back to a plain whole-comp import.
+
+By default the layers arrive inside the comp they came from, which travels along as their container.
+
+#### Sending layers into an existing comp
+
+Check a layer and the same **crosshair icon** appears as on any other row. Here it offers only the comps in your current project, and the layers are copied into the one you pick instead of arriving in their original comp. If nothing is left in that comp afterwards, it isn't imported at all.
+
+> **The destination applies to the whole comp, not to one layer.** Setting it on any row sets it for every layer picked from that comp. Layers from one comp scattered across several destinations would lose the parenting and track mattes tying them to each other.
+
+Copied layers land at the top of the destination comp, keeping their original stacking order, and their parenting and track mattes are rebuilt after the move.
+
+#### What comes with a layer
+
+A layer is rarely self-contained. Before importing, the panel shows what else has to come with your selection, grouped by the layer that needs it, and lets you decide:
+
+| Choice | What happens |
+| ------ | ------------ |
+| **Include Dependencies** | Everything in the list comes too. This is the safe default. |
+| **Selected Layers Only** | Exactly what you ticked. Parented layers arrive unparented, track mattes and effect layer parameters come in empty, and expressions pointing at layers left behind will error. |
+
+Four kinds of link are followed, and each is followed all the way, so a parent's parent comes too:
+
+| Link | Why it has to travel |
+| ---- | -------------------- |
+| **Parent chain** | After Effects recalculates a child's transform when its parent disappears, so leaving a parent behind silently moves the child. |
+| **Track matte** | A matted layer with no matte renders as its unmasked self. |
+| **Effect layer parameters** | Set Matte, Displacement Map, Compound Blur and anything else that points at another layer. |
+| **Expressions** | Layers, comps and footage named in an expression on a layer you picked. |
+
+Expression references are resolved by name and by number, including numbers worked out from `index`, so `thisComp.layer(index - 1)` correctly finds the layer above. Because removing layers renumbers the rest, the references that survive are corrected on the way in: absolute numbers are rewritten to the layer's new position, and relative ones stay relative with a recalculated offset.
+
+> Some references can't be known ahead of time. An expression that builds a layer name or number while it runs, as rigging scripts often do, can't be read without running it, and the confirmation says so rather than pretending the list is complete.
+
+#### Essential Graphics
+
+If a comp's Essential Graphics parameters belong to layers you didn't import, those parameters are dropped from the incoming comp, since they have nothing left to control. Parameters belonging to layers that did come are kept.
 
 ---
 
@@ -90,7 +134,7 @@ With merge on, AEP Transplant matches each imported folder against your current 
 2. **Similar name.** AEP Transplant recognizes common naming variations: ordering prefixes and suffixes are ignored (`a.precomps` matches `02_PRECOMPS`), and common naming dialects count as the same folder (`Images` / `Bitmaps` / `Graphics` / `PNGs`, `Footage` / `Videos` / `Movies`, `Audio` / `Music` / `SFX`, `Precomps` / `Pre Comps` / `Precompositions`, and more).
 3. **Content.** If nothing matches by name at all, a folder whose contents already exist somewhere in your project is combined into wherever those live.
 
-How the first two passes rank against each other is configurable in [Folder Merge Settings](features.md#folder-merge-settings): by default an exact name match wins wherever it sits in your project, but you can instead favor folders higher in your structure — see the **Folder merge** option there.
+How the first two passes rank against each other is configurable in [Folder Merge Settings](features.md#folder-merge-settings): by default an exact name match wins wherever it sits in your project, but you can instead favor folders higher in your structure. See the **Folder merge** option there.
 
 A folder that finds no match of its own doesn't strand what's inside it. AEP Transplant keeps looking one level deeper: subfolders hunt for their own match independently, so a source project that nests everything under one project-named folder still merges cleanly instead of landing as a single unmatched block. Whatever remains after that still gets carried into the closest matched folder, so nothing is left behind unless truly nothing in that branch matches anything in your project.
 
@@ -174,6 +218,10 @@ If the items you're importing use footage stored outside your current project's 
 
 Copies land in a new folder named `<source file> - AEP Transplant`, created next to wherever your project already keeps most of its footage. Image sequences are copied as a whole, every frame included. If you import from the same source file again later, previously copied assets are reused instead of duplicated.
 
+**What counts as "outside"** is anything not under the folder above your `.aep`, so a sibling `Footage` folder next to an `AEP` folder is treated as part of the project. That step up stops short of folders that hold everything rather than one project (your home folder and its standard children like Desktop or Documents, a drive's root), where the `.aep`'s own folder is the boundary instead. Without that, a project saved straight to the Desktop would count your entire home folder as "the project" and never offer to copy anything.
+
+Illustrator and Photoshop files brought in as individual layers are covered by this too. Copying one relinks every layer taken from it to the copy.
+
 > This check only runs on a saved project, since AEP Transplant needs your project's location to know what counts as "external" in the first place.
 
 ---
@@ -190,7 +238,7 @@ AEP Transplant watches the files you've worked with and tells you when they chan
 
 <img src="assets/features-reload.svg" alt="Reload button" class="doc-illustration bare modal" />
 
-Click **↺ Reload** to re-read the current file from disk and pick up any changes.
+Click **↺ Reload**, in the top bar next to **✕**, to re-read the current file from disk and pick up any changes.
 
 This is especially useful on shared projects: if a teammate updates an `.aep` you're sourcing from, the dot lets you know before you import stale content.
 
@@ -206,6 +254,7 @@ AEP Transplant separates the import into two phases, each with different undo be
 | ----- | :-------: | ----- |
 | **Import** | No | Brings the reduced project into AE. Cannot be reversed via Cmd+Z. |
 | **Merge** | Yes | Every move, replace, and rename collapses into a single Undo step. |
+| **Layers copied into an existing comp** | Yes, separately | Not part of that single step. After Effects refuses to copy a layer carrying a parent or a linked expression while an undo group is open, so these are made outside one and become After Effects' own undo entries. Cmd+Z/Ctrl+Z again after undoing the merge to walk them back out. Imports that set no destination comp are unaffected. |
 
 **To fully discard an import:**
 1. Undo the merge: Cmd+Z/Ctrl+Z **once**. This parks everything back into a single labeled folder at the project root (named after the source file, suffixed `(not merged)` if anything was left unmatched).

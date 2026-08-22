@@ -19,13 +19,14 @@ The panel is divided into five zones, from top to bottom:
   </div>
 </div>
 
-The top bar is where you load a source file.
+The top bar is where you load a source file. You can also drag a file straight onto the panel from Finder or Explorer, which does the same thing as picking one here.
 
 | Control | Description |
 | ------- | ----------- |
 | **Clock button** | Opens the [Recent Projects](interface.md#recent-projects) list. A blue dot on this button means one or more recent projects have been updated since you last loaded them. |
 | **→ Choose AEP, PSD or AI…** | Opens a file dialog to pick a source file. Supports `.aep`, `.psd`, `.psb`, and `.ai`. Once a file is loaded this becomes an **✕** button that clears the current file. |
 | **File name** | Displays the name of the currently loaded file. Hover over it when it's truncated to see the full path. A blue dot next to the name means the loaded file has changed on disk since you opened it. |
+| **Reload button** | Appears next to the **✕** once a file is loaded. Re-reads the file from disk, picking up any changes since you opened it. |
 
 ---
 
@@ -50,9 +51,11 @@ The main panel shows the full folder and asset structure of the loaded file, mir
 - **Comps** show a tooltip on hover with dimensions, duration, frame rate, and usage count.
 - **Label colors** are shown as small swatches, matching After Effects' label palette.
 - **Solids, Nulls, and Adjustment Layers** are excluded, since they're scaffolding, not reusable assets.
-- The **↺ Reload** button (top-right corner of the tree) re-reads the file from disk without clearing your current selection.
+- The **↺ Reload** button (in the top bar, next to **✕**) re-reads the file from disk without clearing your current selection.
 
 **Checking an item** selects it for import. A **crosshair icon** appears next to each checked item; clicking it opens the [Target Picker](features.md#target-picker).
+
+**Comps** also carry a **`>`** button at the right of their row, which opens that comp's layers so you can import individual ones. See [Layer Import](features.md#layer-import).
 
 For any PSD or AI file, a **SWAP SOURCE** row appears above its layer items, whether that file was loaded directly or is nested inside an `.aep`. See [Swap Source](features.md#swap-source) for details.
 
