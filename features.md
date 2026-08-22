@@ -45,7 +45,7 @@ Layers check on and off like anything else in the tree, and the same search and 
 
 By default the layers arrive inside the comp they came from, which travels along as their container.
 
-#### Sending layers into an existing comp
+<h4 id="layer-targets">Sending layers into an existing comp</h4>
 
 Check a layer and the same **crosshair icon** appears as on any other row. Here it offers only the comps in your current project, and the layers are copied into the one you pick instead of arriving in their original comp. If nothing is left in that comp afterwards, it isn't imported at all.
 
