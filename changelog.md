@@ -2,6 +2,14 @@
 
 ---
 
+### v1.1.3 - September 1, 2026
+
+<h3 style="color:#EB6669">FIXED</h3>
+
+* **Maintenance:** internal improvements and minor fixes.
+
+---
+
 ### v1.1.2 - August 30, 2026
 
 <h3 style="color:#EB6669">ADDED</h3>
