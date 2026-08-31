@@ -2,6 +2,19 @@
 
 ---
 
+### v1.1.2 - August 30, 2026
+
+<h3 style="color:#EB6669">ADDED</h3>
+
+* **Blue dots now track changes within the project:** reloading a source file now marks the comps, footage and layers that changed or were added, not just the file itself. See [Update Watcher](features.md#update-watcher).
+* **Expressions are followed for whole comps:** importing a comp now brings the comps and footage its expressions point to, with the same confirmation you get for layers. See [What comes with a layer](features.md#what-comes-with-a-layer).
+
+<h3 style="color:#EB6669">CHANGED</h3>
+
+* **Expressions that name their own comp:** these are now converted to `thisComp`, so they keep working after import, and any layer they depend on comes along.
+
+---
+
 ### v1.1.1 - August 27, 2026
 
 <h3 style="color:#EB6669">FIXED</h3>

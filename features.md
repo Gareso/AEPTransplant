@@ -17,6 +17,8 @@ The core workflow:
 
 AEP Transplant extracts only the checked items and their real dependencies. Everything else in the source project stays behind. Footage that isn't reachable from your selection is never imported.
 
+Dependencies include the comps and footage your selection reaches through an **expression**, which nothing in the project file otherwise points at. When that happens you are shown what has to come and asked before anything is imported. See [What comes with a layer](features.md#what-comes-with-a-layer), which covers whole comps too.
+
 **Supported file types:**
 
 | Type | What you browse | What gets imported |
@@ -71,9 +73,13 @@ Four kinds of link are followed, and each is followed all the way, so a parent's
 | **Parent chain** | After Effects recalculates a child's transform when its parent disappears, so leaving a parent behind silently moves the child. |
 | **Track matte** | A matted layer with no matte renders as its unmasked self. |
 | **Effect layer parameters** | Set Matte, Displacement Map, Compound Blur and anything else that points at another layer. |
-| **Expressions** | Layers, comps and footage named in an expression on a layer you picked. |
+| **Expressions** | Layers, comps and footage named in an expression. A layer named in one comes as a layer; a comp or a footage item named in one comes whole, with its own dependencies. |
+
+Expressions are followed for **whole comps too**, not just for layer selections. A comp's layer can reach another comp with `comp("Shot_01")`, and nothing in the project file points from one to the other, so that comp would otherwise be left behind and the expression would arrive aimed at nothing. When importing a whole comp reaches something this way, you get the same confirmation before anything is imported. References are followed onwards as well, so a comp pulled in by an expression has its own expressions read in turn.
 
 Expression references are resolved by name and by number, including numbers worked out from `index`, so `thisComp.layer(index - 1)` correctly finds the layer above. Because removing layers renumbers the rest, the references that survive are corrected on the way in: absolute numbers are rewritten to the layer's new position, and relative ones stay relative with a recalculated offset.
+
+A comp that refers to **itself by name** is rewritten to `thisComp` on the way in. Writing `comp("MyComp")` inside `MyComp` is the same thing as `thisComp` right up until the comp is imported somewhere that already has a comp of that name: the merge renames one of them, and the reference then quietly points at the *other* comp. It still evaluates, so nothing reports an error and the result is simply wrong. `thisComp` cannot come unstuck that way. This is left alone where the source project itself has two comps sharing a name, since the reference is genuinely ambiguous there and After Effects resolves it by its own rule.
 
 > Some references can't be known ahead of time. An expression that builds a layer name or number while it runs, as rigging scripts often do, can't be read without running it, and the confirmation says so rather than pretending the list is complete.
 
@@ -241,6 +247,7 @@ AEP Transplant watches the files you've worked with and tells you when they chan
 - A **blue dot on the clock button** means one or more projects in your recent list have been saved since you last loaded them here.
 - A **blue dot next to the loaded file name** means the currently open source file has changed on disk since you loaded it.
 - Blue dots **inside the [Recent Projects](interface.md#recent-projects) list** appear on individual entries that have updated.
+- Blue dots **on rows in the tree** mark the comps, footage items and layers that changed inside the file. These appear when you reload, and are `.aep` only.
 
 <img src="assets/features-reload.svg" alt="Reload button" class="doc-illustration bare modal" />
 
@@ -249,6 +256,16 @@ Click **↺ Reload**, in the top bar next to **✕**, to re-read the current fil
 This is especially useful on shared projects: if a teammate updates an `.aep` you're sourcing from, the dot lets you know before you import stale content.
 
 > Reload only refreshes what's showing in the tree. It has no effect on what actually gets imported: every import already reads the file's current state from disk, whether or not you've clicked Reload first.
+
+#### What changed inside the file
+
+The file-name dot tells you a project was saved. Reload it and the dots move inside: the comps and footage items that actually changed are marked, and opening a comp marks the individual layers within it. Items and layers that are new since you last looked are marked as well. Deleted ones aren't, having no row left to carry a mark, and neither is something you only moved to another folder.
+
+Each reload shows that reload's changes and nothing older, so a dot always answers "what changed since I last reloaded". Reload again with nothing new and the marks clear.
+
+The first time you open a project here it is recorded silently and shows no dots, because there is no earlier version of it to compare against.
+
+> What counts as a change is the content itself, which catches edits the panel doesn't otherwise read: keyframes, effects, masks, expressions, text. What it deliberately ignores is anything that is only a change of view, so scrubbing the playhead, selecting layers, twirling properties open and rearranging panels all leave a project unmarked, as does After Effects' own internal bookkeeping.
 
 ---
 
