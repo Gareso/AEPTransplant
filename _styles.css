@@ -266,8 +266,22 @@ section.cover .cover-main>p:last-child a:hover {
   padding: 0;
 }
 
-.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {
-    margin: 0.2em 0;
+/* Paragraphs need clearly more room than the whitespace between lines inside
+   them (~0.6em at the theme's line-height). At the old 0.2em the gap between
+   two paragraphs was SMALLER than the gap between two lines, so a run of prose
+   collapsed into one grey wall with no visible structure. Lists stay tighter:
+   their items are already separated by bullets and numbers, and loose spacing
+   there just breaks a list into unrelated fragments. */
+.markdown-section p {
+    margin: 1.1em 0;
+}
+
+.markdown-section figure, .markdown-section ul, .markdown-section ol {
+    margin: 0.6em 0;
+}
+
+.markdown-section li {
+    margin: 0.4em 0;
 }
 
 .markdown-section ol li::marker {
@@ -460,4 +474,39 @@ section.cover .cover-main>p:last-child a:hover {
 
 .markdown-section .warning-box strong {
   color: #EB6669;
+}
+
+/* Stand-in for a Use Case video that hasn't been published yet: fills the
+   same 16:9 box the iframe will occupy, so the page reviews at its real
+   proportions instead of collapsing where the embed should be. Delete the
+   placeholder div (not this rule) once each video's embed is pasted in. */
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #bdbdbd;
+    border-radius: 10px;
+    background: #dedede;
+    color: #8e8e8e;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Placeholder row in the sidebar for a section that will grow (more Use Case
+   videos). Deliberately not a link, so it needs its own colour: the theme only
+   ever styles sidebar <a> elements, which would leave bare text inheriting a
+   near-black colour against the dark panel. Muted and non-interactive, so it
+   reads as "coming" rather than as a broken link. */
+.sidebar-soon {
+    color: #6e6e6e;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: italic;
+    cursor: default;
+    user-select: none;
 }

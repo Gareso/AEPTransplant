@@ -2,6 +2,9 @@
 * [AEP Transplant](aeptransplant.md#aep-transplant)
   * [Installation](installation.md#installation)
   * [Interface](interface.md#interface)
+* [Use Cases](use-cases.md#use-cases)
+  * [Motion Library](use-cases.md#motion-library)
+  * <span class="sidebar-soon">...more to come</span>
 * [Features](features.md#features)
   * [Browse & Import](features.md#browse-import)
   * [Layer Import](features.md#layer-import)
