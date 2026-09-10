@@ -1,0 +1,33 @@
+<svg viewBox="0 0 414 304" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <!-- The host-side (ScriptUI) dialog, drawn in the same palette as
+       features-external-assets.svg, which depicts its sibling: body #1c1c1c,
+       white title bar, panels stroked #3a3a3a, buttons #242424 on #4a4a4a. -->
+  <rect width="414" height="304" fill="#1c1c1c"/>
+  <rect width="414" height="36" fill="#fff"/>
+  <text x="21" y="23" font-size="13" font-weight="bold" fill="#4a4a4a">AEP Transplant</text>
+
+  <!-- heading: ScriptUI renders a "⚠" glyph, drawn here as the house file does -->
+  <g transform="translate(23,54)" fill="none" stroke="#c9c9c9" stroke-width=".98" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M7 1.2 13.2 12.6 0.8 12.6Z"/>
+    <line x1="7" y1="5.4" x2="7" y2="8.6"/>
+  </g>
+  <circle cx="30" cy="65.4" r=".9" fill="#c9c9c9"/>
+  <text x="45" y="67" font-size="13" font-weight="bold" fill="#e6e6e6">File Already Exists</text>
+  <line x1="21" y1="80" x2="393" y2="80" stroke="#3a3a3a"/>
+
+  <text x="21" y="104" font-size="12" fill="#c9c9c9">"GTHI26A_Hero_v4 (000000).psd" already exists in this</text>
+  <text x="21" y="122" font-size="12" fill="#c9c9c9">project's asset folder, but it's a different file.</text>
+  <text x="21" y="158" font-size="12" fill="#c9c9c9">What would you like to do?</text>
+
+  <rect x="21" y="178" width="372" height="44" rx="4.44" fill="none" stroke="#3a3a3a"/>
+  <rect x="178.5" y="193" width="13" height="13" rx="1.5" fill="none" stroke="#c9c9c9" stroke-width=".98"/>
+  <text x="199" y="204" font-size="12" fill="#c9c9c9">Apply to all</text>
+
+  <rect x="21" y="234" width="372" height="56" rx="3.89" fill="none" stroke="#3a3a3a"/>
+  <rect x="48" y="247" width="100" height="30.6" rx="4.31" fill="#242424" stroke="#4a4a4a" stroke-width="1.27"/>
+  <text x="98" y="266" font-size="12" fill="#e6e6e6" text-anchor="middle">Overwrite</text>
+  <rect x="157" y="247" width="100" height="30.6" rx="4.31" fill="#242424" stroke="#4a4a4a" stroke-width="1.27"/>
+  <text x="207" y="266" font-size="12" fill="#e6e6e6" text-anchor="middle">Use Current</text>
+  <rect x="266" y="247" width="100" height="30.6" rx="4.31" fill="#242424" stroke="#4a4a4a" stroke-width="1.27"/>
+  <text x="316" y="266" font-size="12" fill="#e6e6e6" text-anchor="middle">Keep Both</text>
+</svg>

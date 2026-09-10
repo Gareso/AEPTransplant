@@ -29,6 +29,14 @@ Dependencies include the comps and footage your selection reaches through an **e
 
 > The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then manually delete that folder. See [Undo Behavior](features.md#undo) for the full breakdown.
 
+#### Proxies
+
+<img src="assets/features-proxies.svg" alt="Tree rows showing the proxy box, filled when the proxy is in use" class="doc-illustration bare compact" />
+
+A comp or footage item with a proxy attached carries the same small box After Effects shows in its Project panel, just left of the item's icon: an outline when a proxy is set, filled when it's the one being used. An item using a proxy also takes the proxy's icon, so a `.mov` standing behind a Photoshop proxy looks the way it does in your project panel.
+
+Proxies travel with their items. See [External Assets](features.md#external-assets) for what happens to the proxy files themselves.
+
 #### Missing Source Files
 
 <img src="assets/features-missing-source.svg" alt="A footage item with a missing source file, dimmed with a crossed-out icon" class="doc-illustration bare compact" />
@@ -65,6 +73,7 @@ A layer is rarely self-contained. Before importing, the panel shows what else ha
 | ------ | ------------ |
 | **Include Dependencies** | Everything in the list comes too. This is the safe default. |
 | **Selected Layers Only** | Exactly what you ticked. Parented layers arrive unparented, track mattes and effect layer parameters come in empty, and expressions pointing at layers left behind will error. |
+| **Cancel** | Stops the import. Nothing is read, copied or imported. Escape and clicking outside the dialog do the same. |
 
 Four kinds of link are followed, and each is followed all the way, so a parent's parent comes too:
 
@@ -228,7 +237,25 @@ If the items you're importing use footage stored outside your current project's 
 | **Copy to Project** | Copies the external files into your project folder and relinks the imported items to the copies. |
 | **Leave in Place** | Leaves the imported items linked to their current location. |
 
-Copies land in a new folder named `<source file> - AEP Transplant`, created next to wherever your project already keeps most of its footage. Image sequences are copied as a whole, every frame included. If you import from the same source file again later, previously copied assets are reused instead of duplicated.
+Copies land in a new folder named `<source file> - AEP Transplant`, created next to wherever your project already keeps most of its footage. Image sequences are copied as a whole, every frame included.
+
+**Proxies count as assets too.** An item with a proxy attached needs two files on disk rather than one, so both are checked and both are copied, and the list marks the proxy ones so you can tell them apart. The proxy setting itself comes across exactly as it was, including whether Use Proxy was switched on.
+
+**You are only asked about files your project doesn't already have.** Import from the same source again and anything already sitting in that folder, unchanged, is simply reused and the items are pointed at it. Nothing is copied twice and there's no dialog to dismiss. Files are matched by size and modification date, and when those disagree the two are compared directly, so a copy made by an older version of AEP Transplant is still recognised as the same file.
+
+#### When a file of that name is already there
+
+<img src="assets/features-file-conflict.svg" alt="The File Already Exists dialog, offering Overwrite, Use Current or Keep Both" class="doc-illustration bare modal" />
+
+If a file in that folder shares a name with something being copied in but isn't the same file, AEP Transplant asks rather than choosing for you:
+
+| Option | What it does |
+| ------ | ------------ |
+| **Overwrite** | Replaces the file that's there and links to it. |
+| **Use Current** | Keeps the file that's there and links to that instead. |
+| **Keep Both** | Copies the incoming file in beside it, numbered, leaving the original alone. |
+
+Tick **Apply to all** to settle the rest of the import the same way. Whatever you choose carries through to the items themselves, so you won't be asked the same question twice in different words a moment later.
 
 **What counts as "outside"** is anything not under the folder above your `.aep`, so a sibling `Footage` folder next to an `AEP` folder is treated as part of the project. That step up stops short of folders that hold everything rather than one project (your home folder and its standard children like Desktop or Documents, a drive's root), where the `.aep`'s own folder is the boundary instead. Without that, a project saved straight to the Desktop would count your entire home folder as "the project" and never offer to copy anything.
 

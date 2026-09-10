@@ -1,6 +1,8 @@
 # AEP Transplant
 
-<img src="assets/hero-panel.svg" alt="AEP Transplant browsing a source project and importing only what's checked" class="doc-illustration bare wide" />
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/foxWpIytClg" title="AEP Transplant" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Every motion designer knows this situation: you need to revert a single comp to a previous version. And it looks like this:
 

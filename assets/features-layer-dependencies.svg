@@ -49,8 +49,15 @@
   <text x="172" y="151" font-size="11" font-weight="600" fill="#e0e0e0">Main Text</text>
   <text x="30" y="181" font-size="12" fill="#e0e0e0">Highlighted Text</text>
   <text x="370" y="181" font-size="11" fill="#9a9a9a" text-anchor="end">matte</text>
-  <rect x="232" y="216" width="146" height="30" rx="5" fill="#4d9fff" stroke="none"/>
-  <text x="305.0" y="235" font-size="12" fill="#fff" text-anchor="middle">Include Dependencies</text>
-  <rect x="78" y="216" width="146" height="30" rx="5" fill="#232323" stroke="#444"/>
-  <text x="151.0" y="235" font-size="12" fill="#e0e0e0" text-anchor="middle">Selected Layers Only</text>
+  <!-- Footer: right-aligned, 8px gap, and all three the same height, since
+       .modal-footer stretches its buttons rather than centring them. The two
+       long labels wrap to two lines, which is what sets that height. -->
+  <rect x="255" y="206" width="123" height="46" rx="5" fill="#4d9fff" stroke="none"/>
+  <text x="316.5" y="226" font-size="12" fill="#fff" text-anchor="middle">Include</text>
+  <text x="316.5" y="241" font-size="12" fill="#fff" text-anchor="middle">Dependencies</text>
+  <rect x="129" y="206" width="118" height="46" rx="5" fill="#232323" stroke="#444"/>
+  <text x="188" y="226" font-size="12" fill="#e0e0e0" text-anchor="middle">Selected</text>
+  <text x="188" y="241" font-size="12" fill="#e0e0e0" text-anchor="middle">Layers Only</text>
+  <rect x="51" y="206" width="70" height="46" rx="5" fill="#232323" stroke="#444"/>
+  <text x="86" y="233" font-size="12" fill="#e0e0e0" text-anchor="middle">Cancel</text>
 </svg>

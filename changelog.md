@@ -2,6 +2,19 @@
 
 ---
 
+### v1.1.4 - September 10, 2026
+
+<h3 style="color:#EB6669">ADDED</h3>
+
+* **Proxy support:** proxies now come across with the items that use them, copied into your project and relinked along with everything else, and the Use Proxy setting arrives exactly as you left it. Items with a proxy are marked in the tree the way After Effects marks them in its Project panel. See [External Assets](features.md#external-assets).
+* **Smarter external file copy:** you're only asked about assets your project doesn't already have, so importing from the same source again reuses what's there instead of asking every time. When an incoming file shares a name with a different file already in your asset folder, you choose **Overwrite**, **Use Current** or **Keep Both**, with **Apply to all** for the rest of the import.
+
+<h3 style="color:#EB6669">CHANGED</h3>
+
+* **Long names now show both ends:** an item name too long for the panel is shortened in the middle rather than cut off at the end, the way Finder does it, so the version or extension you were looking for stays readable.
+
+---
+
 ### v1.1.3 - September 1, 2026
 
 <h3 style="color:#EB6669">FIXED</h3>
