@@ -45,6 +45,41 @@ If a footage item's source file can't be found, its row is dimmed and its icon c
 
 ---
 
+<h2 id="folder-import">Folder Import</h2>
+
+<img src="assets/features-folder-import.svg" alt="A targeted folder, its contents travelling with it" class="doc-illustration bare compact" />
+
+Folders tick like anything else. Checking one takes everything inside it, all the way down, and unchecking it clears them again, which saves hunting through a long list of comps a row at a time.
+
+Selection only ever travels downwards. Picking a couple of comps out of a folder by hand says something about those comps, not a half-answer about the folder, so the folder's own tick stays exactly where you left it.
+
+#### Sending a whole folder somewhere
+
+A folder carries a **crosshair** like any other row, and what it sets covers the whole branch: every row underneath travels to the same place and shows that destination instead of setting one of its own. A target that some of the rows below quietly ignored would be worse than no target at all. **OPT/ALT + click** the folder's crosshair to clear it and hand those rows back their own.
+
+Where the branch lands depends on the folder's **own name**:
+
+| The folder you picked | What happens |
+| --------------------- | ------------ |
+| Means the same folder (`a.precomps` aimed at `02_PRECOMPS`) | The contents **merge into** it |
+| Means something else (`SH030_Theme` aimed at `Library`) | The folder **nests inside** it, arriving as a folder of its own |
+
+Names are matched the same way they are everywhere else, so ordering prefixes, suffixes and the naming dialects you have set up all count. See [Folder Merge Settings](features.md#folder-merge-settings). The folder's row spells out which of the two you are getting before you import, so it is never something you find out afterwards. A folder aimed at the top of your project always nests.
+
+> Inside the branch, everything arrives exactly as it left. Subfolders are rebuilt as they were, folding together only where a folder of that name is already sitting in that same spot, and nothing is hunted for anywhere else in your project. You said where it goes, so the guessing stops there.
+
+Duplicate items are the exception, and they are looked for everywhere rather than only at the landing spot, so a comp you already have in some other folder is caught instead of arriving as a second copy. The prompt names the folder the other copy sits in, and whatever you pick, the incoming item stays where you aimed it:
+
+| Your answer | What happens |
+| ----------- | ------------ |
+| **Replace** | The copy you already had is retired and everything that pointed at it now points here |
+| **Use Current** | The incoming one is dropped and relinked to the copy you already have |
+| **Keep Both** | The incoming name is numbered so the two stay easy to tell apart, and expressions follow |
+
+None of them moves anything across your project.
+
+---
+
 <h2 id="layer-import">Layer Import</h2>
 
 <img src="assets/features-layer-import.svg" alt="A comp's layer list, with layers checked and targeted" class="doc-illustration bare compact" />

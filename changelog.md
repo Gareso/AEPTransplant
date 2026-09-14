@@ -2,6 +2,20 @@
 
 ---
 
+### v1.1.5 - in progress
+
+<h3 style="color:#EB6669">ADDED</h3>
+
+* **Folder import:** folders tick like anything else. Checking one takes everything inside it, all the way down, which beats hunting through a long list of comps one row at a time. See [Folder Import](features.md#folder-import).
+* **One destination for a whole folder:** give a folder a target and its entire branch travels there together, structure intact. Whether it merges into the folder you picked or arrives nested inside it depends on its own name, and the row tells you which before you import.
+
+<h3 style="color:#EB6669">CHANGED</h3>
+
+* **Duplicates are found wherever they live:** aiming something at a folder now checks the whole project for an item of that name, not just the folder it is headed for, so you are asked about a comp you already have somewhere else instead of quietly getting a second copy. The prompt names the folder that copy sits in, and whatever you choose, the incoming item stays where you aimed it.
+* **Tidier rows:** the change dot moved to its own column down the left edge, so the marks line up instead of stepping in and out with each level, and rows no longer shift or grow when you select them.
+
+---
+
 ### v1.1.4 - September 10, 2026
 
 <h3 style="color:#EB6669">ADDED</h3>

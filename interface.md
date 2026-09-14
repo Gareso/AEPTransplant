@@ -47,13 +47,13 @@ Filter preferences are saved between sessions.
 
 The main panel shows the full folder and asset structure of the loaded file, mirroring After Effects' Project panel layout.
 
-- **Folders** expand and collapse on click. OPT/ALT + click a folder arrow to collapse or expand all folders at once.
+- **Folders** expand and collapse on click. OPT/ALT + click a folder arrow to collapse or expand all folders at once. They tick like anything else, taking everything inside them, and carry a crosshair of their own that sends the whole branch to one place. See [Folder Import](features.md#folder-import).
 - **Comps** show a tooltip on hover with dimensions, duration, frame rate, and usage count.
 - **Label colors** are shown as small swatches, matching After Effects' label palette.
 - **Solids, Nulls, and Adjustment Layers** are excluded, since they're scaffolding, not reusable assets.
 - The **↺ Reload** button (in the top bar, next to **✕**) re-reads the file from disk without clearing your current selection.
 
-**Checking an item** selects it for import. A **crosshair icon** appears next to each checked item; clicking it opens the [Target Picker](features.md#target-picker).
+**Checking an item** selects it for import. A **crosshair icon** appears next to each checked item; clicking it opens the [Target Picker](features.md#target-picker). A row inside a folder that already has a destination shows that destination instead, dimmed, since the folder speaks for everything under it.
 
 **Comps** also carry a **`>`** button at the right of their row, which opens that comp's layers so you can import individual ones. See [Layer Import](features.md#layer-import).
 

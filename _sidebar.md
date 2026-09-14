@@ -7,6 +7,7 @@
   * <span class="sidebar-soon">...more to come</span>
 * [Features](features.md#features)
   * [Browse & Import](features.md#browse-import)
+  * [Folder Import](features.md#folder-import)
   * [Layer Import](features.md#layer-import)
   * [Search & Filter](features.md#search-filter)
   * [Target Picker](features.md#target-picker)

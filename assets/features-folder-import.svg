@@ -1,0 +1,96 @@
+<svg viewBox="0 0 400 196" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <g id="fi-chev-down"><path d="M-4,-1.5 L0,2.5 L4,-1.5" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+    <!-- Literal paths from client/main.js, left in their 0-24 space. Folders
+         are drawn at 15x15 and item icons at 12x12, so the scales differ:
+         15/24 = 0.625 and 12/24 = 0.5. -->
+    <g id="fi-folder"><g transform="scale(0.625) translate(-12,-12)" fill="#9a9a9a">
+      <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+    </g></g>
+    <g id="fi-comp"><g transform="scale(0.5) translate(-12,-12)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+      <polyline points="2 17 12 22 22 17"/>
+      <polyline points="2 12 12 17 22 12"/>
+    </g></g>
+    <g id="fi-media"><g transform="scale(0.5) translate(-12,-12)" fill="#9a9a9a" fill-rule="evenodd">
+      <path d="M2 3h20v18H2V3zm8 5v8l6-4-6-4z"/>
+    </g></g>
+
+    <!-- target-icon: 13x13 display out of a 24x24 viewBox -->
+    <g id="fi-target"><g transform="scale(0.5417) translate(-12,-12)" fill="none" stroke="#4d9fff" stroke-width="2">
+      <circle cx="12" cy="12" r="7"/><line x1="12" y1="1" x2="12" y2="23"/><line x1="1" y1="12" x2="23" y2="12"/>
+    </g></g>
+    <!-- Locked: the glyph dims, never the icon, so nothing inside it fades with it -->
+    <g id="fi-target-locked" opacity="0.55"><g transform="scale(0.5417) translate(-12,-12)" fill="none" stroke="#4d9fff" stroke-width="2">
+      <circle cx="12" cy="12" r="7"/><line x1="12" y1="1" x2="12" y2="23"/><line x1="1" y1="12" x2="23" y2="12"/>
+    </g></g>
+
+    <g id="fi-box-on"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#4d9fff"/><path d="M-3.3,0.3 L-1.3,2.3 L3.3,-2.7" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="fi-box-off"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#1a1a1a" stroke="#8a8a8a" stroke-width="1.3"/></g>
+  </defs>
+
+  <rect x=".5" y=".5" width="399" height="195" rx="6" fill="#232323" stroke="#3a3a3a"/>
+
+  <!-- Row geometry copied from the panel: a row is 25px, and a checkbox sits
+       at 45 + 16*depth, moving right by 14 when the crosshair's slot opens on
+       selection. Rows here are all selected, so every checkbox is at 59+16d. -->
+
+  <!-- 02_PRECOMPS, depth 0, holding the target for the whole branch -->
+  <line x1="8" y1="37.5" x2="392" y2="37.5" stroke="#1c1c1c"/>
+  <rect x="18" y="15.5" width="8" height="8" rx="2" fill="#e8920d"/>
+  <use xlink:href="#fi-chev-down" href="#fi-chev-down" x="38" y="19.5"/>
+  <use xlink:href="#fi-target" href="#fi-target" x="52" y="19.5"/>
+  <use xlink:href="#fi-box-on" href="#fi-box-on" x="71" y="19.5"/>
+  <use xlink:href="#fi-folder" href="#fi-folder" x="90" y="19.5"/>
+  <text x="102" y="23" fill="#b8bcc2" font-weight="600" font-size="11">02_PRECOMPS</text>
+  <text x="392" y="23" fill="#4d9fff" font-size="10" text-anchor="end">merges → 02. PRECOMPS</text>
+
+  <!-- Two comps inside it, depth 1: crosshairs lit but locked -->
+  <line x1="8" y1="62.5" x2="392" y2="62.5" stroke="#1c1c1c"/>
+  <rect x="18" y="40.5" width="8" height="8" rx="2" fill="#a9cbc7"/>
+  <use xlink:href="#fi-target-locked" href="#fi-target-locked" x="68" y="44.5"/>
+  <use xlink:href="#fi-box-on" href="#fi-box-on" x="87" y="44.5"/>
+  <use xlink:href="#fi-comp" href="#fi-comp" x="106" y="44.5"/>
+  <text x="118" y="48" fill="#e0e0e0" font-size="12">HERO_Endcard</text>
+
+  <line x1="8" y1="87.5" x2="392" y2="87.5" stroke="#1c1c1c"/>
+  <rect x="18" y="65.5" width="8" height="8" rx="2" fill="#677de0"/>
+  <use xlink:href="#fi-target-locked" href="#fi-target-locked" x="68" y="69.5"/>
+  <use xlink:href="#fi-box-on" href="#fi-box-on" x="87" y="69.5"/>
+  <use xlink:href="#fi-comp" href="#fi-comp" x="106" y="69.5"/>
+  <text x="118" y="73" fill="#e0e0e0" font-size="12">HERO_Lower3rd</text>
+
+  <!-- A subfolder, depth 1: rebuilt as it is inside the destination -->
+  <line x1="8" y1="112.5" x2="392" y2="112.5" stroke="#1c1c1c"/>
+  <rect x="18" y="90.5" width="8" height="8" rx="2" fill="#b3c7b3"/>
+  <use xlink:href="#fi-chev-down" href="#fi-chev-down" x="54" y="94.5"/>
+  <use xlink:href="#fi-target-locked" href="#fi-target-locked" x="68" y="94.5"/>
+  <use xlink:href="#fi-box-on" href="#fi-box-on" x="87" y="94.5"/>
+  <use xlink:href="#fi-folder" href="#fi-folder" x="106" y="94.5"/>
+  <text x="118" y="98" fill="#b8bcc2" font-weight="600" font-size="11">wip</text>
+
+  <line x1="8" y1="137.5" x2="392" y2="137.5" stroke="#1c1c1c"/>
+  <rect x="18" y="115.5" width="8" height="8" rx="2" fill="#e5bcc9"/>
+  <use xlink:href="#fi-target-locked" href="#fi-target-locked" x="84" y="119.5"/>
+  <use xlink:href="#fi-box-on" href="#fi-box-on" x="103" y="119.5"/>
+  <use xlink:href="#fi-comp" href="#fi-comp" x="122" y="119.5"/>
+  <text x="134" y="123" fill="#e0e0e0" font-size="12">Endcard_rough_v2</text>
+
+  <!-- A sibling folder left alone, unticked, crosshair not offered -->
+  <line x1="8" y1="162.5" x2="392" y2="162.5" stroke="#1c1c1c"/>
+  <rect x="18" y="140.5" width="8" height="8" rx="2" fill="#3da2a5"/>
+  <use xlink:href="#fi-chev-down" href="#fi-chev-down" x="38" y="144.5"/>
+  <use xlink:href="#fi-box-off" href="#fi-box-off" x="57" y="144.5"/>
+  <use xlink:href="#fi-folder" href="#fi-folder" x="76" y="144.5"/>
+  <text x="88" y="148" fill="#b8bcc2" font-weight="600" font-size="11">03_ASSETS</text>
+
+  <!-- One item picked out of it by hand: the folder above stays unticked,
+       because selection only ever travels downwards -->
+  <line x1="8" y1="187.5" x2="392" y2="187.5" stroke="#1c1c1c"/>
+  <rect x="18" y="165.5" width="8" height="8" rx="2" fill="#a89677"/>
+  <use xlink:href="#fi-target" href="#fi-target" x="68" y="169.5"/>
+  <use xlink:href="#fi-box-on" href="#fi-box-on" x="87" y="169.5"/>
+  <use xlink:href="#fi-media" href="#fi-media" x="106" y="169.5"/>
+  <text x="118" y="173" fill="#e0e0e0" font-size="12">Robot_Turntable.mp4</text>
+</svg>
