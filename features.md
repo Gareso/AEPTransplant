@@ -17,6 +17,8 @@ The core workflow:
 
 Once a file is loaded that button becomes an **✕**, which clears it again along with whatever you had checked and any destinations you had set, ready for a different source.
 
+<img src="assets/features-clear-button.svg" alt="The Choose button before a file is loaded, and the same button as a clear button after" class="doc-illustration bare compact" />
+
 Only the checked items and their real dependencies are extracted. Everything else stays behind.
 
 That includes whatever your selection reaches through an **expression**, which nothing else in the project points at. You are shown what has to come and asked first. See [What comes with a layer](features.md#what-comes-with-a-layer).

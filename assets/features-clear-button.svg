@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+  <rect width="400" height="100" fill="#2b2b2b"/>
+
+  <!-- Same button geometry the other file-picker illustrations use: 22px
+       tall, 5px corner radius, rounded only on the outer edges so the row
+       reads as one segmented control. -->
+  <text x="8" y="13" fill="#9a9a9a" font-size="10">No file loaded</text>
+  <path d="M13,20 H36 V42 H13 Q8,42 8,37 V25 Q8,20 13,20 Z" fill="#232323" stroke="#444"/>
+  <g transform="translate(22,31) scale(0.5833)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle r="9"/><polyline points="0,-5 0,0 4,2"/>
+  </g>
+  <path d="M36,20 H196 Q201,20 201,25 V37 Q201,42 196,42 H36 Z" fill="#232323" stroke="#444"/>
+  <text x="46" y="35" fill="#e0e0e0" font-size="12">→ Choose AEP, PSD or AI…</text>
+  <text x="212" y="35" fill="#6f6f6f" font-size="13" font-style="italic">No project selected</text>
+
+  <text x="8" y="63" fill="#9a9a9a" font-size="10">File loaded: the same button is now the clear button</text>
+  <path d="M13,70 H36 V92 H13 Q8,92 8,87 V75 Q8,70 13,70 Z" fill="#232323" stroke="#444"/>
+  <g transform="translate(22,81) scale(0.5833)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle r="9"/><polyline points="0,-5 0,0 4,2"/>
+  </g>
+  <!-- The clear button, picked out in accent: the one this section is about. -->
+  <path d="M36,70 H63 V92 H36 Z" fill="#232323" stroke="#4d9fff"/>
+  <text x="49.5" y="86" fill="#4d9fff" font-size="12" text-anchor="middle">✕</text>
+  <!-- Reload, which only appears once a file is loaded. -->
+  <path d="M63,70 H88 Q93,70 93,75 V87 Q93,92 88,92 H63 Z" fill="#232323" stroke="#444"/>
+  <g transform="translate(78,81) scale(0.5) translate(-12,-12)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 4 23 10 17 10"/>
+    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+  </g>
+  <circle cx="106" cy="81" r="3" fill="#4d9fff"/>
+  <text x="116" y="86" fill="#9a9a9a" font-size="13">Colleague_Rodrigo.aep</text>
+</svg>
