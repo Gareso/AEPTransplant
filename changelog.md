@@ -2,7 +2,7 @@
 
 ---
 
-### v1.1.5 - in progress
+### v1.2.0 - in progress
 
 <h3 style="color:#EB6669">ADDED</h3>
 
