@@ -15,9 +15,9 @@ The core workflow:
 
 <img src="assets/features-drop-target.svg" alt="The panel's empty state, inviting a file to be dropped on it" class="doc-illustration bare compact" />
 
-AEP Transplant extracts only the checked items and their real dependencies. Everything else in the source project stays behind. Footage that isn't reachable from your selection is never imported.
+Only the checked items and their real dependencies are extracted. Everything else stays behind.
 
-Dependencies include the comps and footage your selection reaches through an **expression**, which nothing in the project file otherwise points at. When that happens you are shown what has to come and asked before anything is imported. See [What comes with a layer](features.md#what-comes-with-a-layer), which covers whole comps too.
+That includes whatever your selection reaches through an **expression**, which nothing else in the project points at. You are shown what has to come and asked first. See [What comes with a layer](features.md#what-comes-with-a-layer).
 
 **Supported file types:**
 
@@ -27,21 +27,21 @@ Dependencies include the comps and footage your selection reaches through an **e
 | `.psd` / `.psb` | Layers of the document | Selected layers as individual footage items |
 | `.ai` | Layers / artboards of the document | Selected layers as individual footage items |
 
-> The import itself is not undoable via Cmd+Z. To fully remove an import, undo the merge step (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then manually delete that folder. See [Undo Behavior](features.md#undo) for the full breakdown.
+> The import itself is not undoable. To remove one, undo the merge (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then delete that folder. See [Undo Behavior](features.md#undo).
 
 #### Proxies
 
 <img src="assets/features-proxies.svg" alt="Tree rows showing the proxy box, filled when the proxy is in use" class="doc-illustration bare compact" />
 
-A comp or footage item with a proxy attached carries the same small box After Effects shows in its Project panel, just left of the item's icon: an outline when a proxy is set, filled when it's the one being used. An item using a proxy also takes the proxy's icon, so a `.mov` standing behind a Photoshop proxy looks the way it does in your project panel.
+An item with a proxy carries the same small box After Effects shows in its Project panel: an outline when a proxy is set, filled when it's the one being used. It also takes the proxy's icon, exactly as in your Project panel.
 
-Proxies travel with their items. See [External Assets](features.md#external-assets) for what happens to the proxy files themselves.
+Proxies travel with their items. See [External Assets](features.md#external-assets) for the proxy files themselves.
 
 #### Missing Source Files
 
 <img src="assets/features-missing-source.svg" alt="A footage item with a missing source file, dimmed with a crossed-out icon" class="doc-illustration bare compact" />
 
-If a footage item's source file can't be found, its row is dimmed and its icon crossed out, with a tooltip explaining why. Its checkbox is disabled: importing it directly would only bring in missing footage. It can still come in as a real dependency of a comp you do select, since After Effects resolves that on its own at import time.
+If a footage item's source file can't be found, its row is dimmed and its icon crossed out. Its checkbox is disabled, since importing it alone would only bring in missing footage, but it still comes along as a dependency of a comp you do select.
 
 ---
 
@@ -49,13 +49,13 @@ If a footage item's source file can't be found, its row is dimmed and its icon c
 
 <img src="assets/features-folder-import.svg" alt="A targeted folder, its contents travelling with it" class="doc-illustration bare compact" />
 
-Folders tick like anything else. Checking one takes everything inside it, all the way down, and unchecking it clears them again, which saves hunting through a long list of comps a row at a time.
+Folders tick like anything else. Checking one takes everything inside it, all the way down, which saves hunting through a long list of comps a row at a time.
 
-Selection only ever travels downwards. Picking a couple of comps out of a folder by hand says something about those comps, not a half-answer about the folder, so the folder's own tick stays exactly where you left it.
+Selection only travels downwards: picking a few comps out of a folder by hand leaves the folder's own tick exactly where you left it.
 
 #### Sending a whole folder somewhere
 
-A folder carries a **crosshair** like any other row, and what it sets covers the whole branch: every row underneath travels to the same place and shows that destination instead of setting one of its own. A target that some of the rows below quietly ignored would be worse than no target at all. **OPT/ALT + click** the folder's crosshair to clear it and hand those rows back their own.
+A folder carries a **crosshair** like any other row, and what it sets covers the whole branch: every row underneath travels to the same place and shows that destination instead of setting its own. **OPT/ALT + click** it to clear the target and hand those rows back their own.
 
 Where the branch lands depends on the folder's **own name**:
 
@@ -64,11 +64,11 @@ Where the branch lands depends on the folder's **own name**:
 | Means the same folder (`a.precomps` aimed at `02_PRECOMPS`) | The contents **merge into** it |
 | Means something else (`SH030_Theme` aimed at `Library`) | The folder **nests inside** it, arriving as a folder of its own |
 
-Names are matched the same way they are everywhere else, so ordering prefixes, suffixes and the naming dialects you have set up all count. See [Folder Merge Settings](features.md#folder-merge-settings). The folder's row spells out which of the two you are getting before you import, so it is never something you find out afterwards. A folder aimed at the top of your project always nests.
+Names are matched as they are everywhere else, so ordering prefixes, suffixes and your own naming dialects all count. See [Folder Merge Settings](features.md#folder-merge-settings). The row spells out which you are getting before you import. A folder aimed at the top of your project always nests.
 
-> Inside the branch, everything arrives exactly as it left. Subfolders are rebuilt as they were, folding together only where a folder of that name is already sitting in that same spot, and nothing is hunted for anywhere else in your project. You said where it goes, so the guessing stops there.
+> Inside the branch, everything arrives exactly as it left. Subfolders are rebuilt as they were, folding together only where a folder of that name already sits in that same spot. You said where it goes, so the guessing stops there.
 
-Duplicate items are the exception, and they are looked for everywhere rather than only at the landing spot, so a comp you already have in some other folder is caught instead of arriving as a second copy. The prompt names the folder the other copy sits in, and whatever you pick, the incoming item stays where you aimed it:
+Duplicates are the exception: they are looked for everywhere, so a comp you already have in another folder is caught rather than arriving twice. The prompt names where the other copy sits, and whatever you pick, the incoming item stays where you aimed it:
 
 | Your answer | What happens |
 | ----------- | ------------ |
@@ -84,17 +84,17 @@ None of them moves anything across your project.
 
 <img src="assets/features-layer-import.svg" alt="A comp's layer list, with layers checked and targeted" class="doc-illustration bare compact" />
 
-Sometimes you don't want a whole comp, just a couple of layers out of it. Every comp row has a **`>`** button on its right that opens that comp's layer list, with a breadcrumb at the top to get back.
+Sometimes you want a couple of layers, not the whole comp. Every comp row has a **`>`** button that opens its layer list, with a breadcrumb back.
 
-Layers check on and off like anything else in the tree, and the same search and category filters apply to them. Back in the main tree, the comp's own checkbox shows a **dash** while only some of its layers are picked, a **tick** when all of them are. Ticking every layer one by one is the same request as ticking the comp, so it collapses back to a plain whole-comp import.
+Layers check on and off like anything else, and the same search and filters apply. In the main tree the comp's checkbox shows a **dash** while only some layers are picked and a **tick** when all are, since ticking every layer is the same request as ticking the comp.
 
 By default the layers arrive inside the comp they came from, which travels along as their container.
 
 <h4 id="layer-targets">Sending layers into an existing comp</h4>
 
-Check a layer and the same **crosshair icon** appears as on any other row. Here it offers only the comps in your current project, and the layers are copied into the one you pick instead of arriving in their original comp. If nothing is left in that comp afterwards, it isn't imported at all.
+Check a layer and the same **crosshair icon** appears. Here it offers only the comps in your current project, and the layers are copied into the one you pick instead of arriving in their original comp. If nothing is left in that comp afterwards, it isn't imported at all.
 
-> **The destination applies to the whole comp, not to one layer.** Setting it on any row sets it for every layer picked from that comp. Layers from one comp scattered across several destinations would lose the parenting and track mattes tying them to each other.
+> **The destination applies to the whole comp, not to one layer.** Setting it on any row sets it for every layer picked from that comp, because layers scattered across several destinations would lose the parenting and track mattes tying them together.
 
 Copied layers land at the top of the destination comp, keeping their original stacking order, and their parenting and track mattes are rebuilt after the move.
 
@@ -102,7 +102,7 @@ Copied layers land at the top of the destination comp, keeping their original st
 
 <img src="assets/features-layer-dependencies.svg" alt="The Layer Import Dependencies dialog" class="doc-illustration bare modal" />
 
-A layer is rarely self-contained. Before importing, the panel shows what else has to come with your selection, grouped by the layer that needs it, and lets you decide:
+A layer is rarely self-contained. Before importing, the panel shows what else has to come, grouped by the layer that needs it:
 
 | Choice | What happens |
 | ------ | ------------ |
@@ -119,17 +119,17 @@ Four kinds of link are followed, and each is followed all the way, so a parent's
 | **Effect layer parameters** | Set Matte, Displacement Map, Compound Blur and anything else that points at another layer. |
 | **Expressions** | Layers, comps and footage named in an expression. A layer named in one comes as a layer; a comp or a footage item named in one comes whole, with its own dependencies. |
 
-Expressions are followed for **whole comps too**, not just for layer selections. A comp's layer can reach another comp with `comp("Shot_01")`, and nothing in the project file points from one to the other, so that comp would otherwise be left behind and the expression would arrive aimed at nothing. When importing a whole comp reaches something this way, you get the same confirmation before anything is imported. References are followed onwards as well, so a comp pulled in by an expression has its own expressions read in turn.
+Expressions are followed for **whole comps too**. A layer can reach another comp with `comp("Shot_01")` and nothing in the project file points from one to the other, so that comp would otherwise be left behind with the expression aimed at nothing. You get the same confirmation, and references are followed onwards, so a comp pulled in this way has its own expressions read in turn.
 
-Expression references are resolved by name and by number, including numbers worked out from `index`, so `thisComp.layer(index - 1)` correctly finds the layer above. Because removing layers renumbers the rest, the references that survive are corrected on the way in: absolute numbers are rewritten to the layer's new position, and relative ones stay relative with a recalculated offset.
+References resolve by name and by number, including numbers worked out from `index`, so `thisComp.layer(index - 1)` finds the layer above. Since dropping layers renumbers the rest, surviving references are corrected on the way in: absolute numbers are rewritten to the new position, relative ones stay relative with a recalculated offset.
 
-A comp that refers to **itself by name** is rewritten to `thisComp` on the way in. Writing `comp("MyComp")` inside `MyComp` is the same thing as `thisComp` right up until the comp is imported somewhere that already has a comp of that name: the merge renames one of them, and the reference then quietly points at the *other* comp. It still evaluates, so nothing reports an error and the result is simply wrong. `thisComp` cannot come unstuck that way. This is left alone where the source project itself has two comps sharing a name, since the reference is genuinely ambiguous there and After Effects resolves it by its own rule.
+A comp referring to **itself by name** is rewritten to `thisComp`. Inside `MyComp`, `comp("MyComp")` means the same thing right up until it lands somewhere that already has a comp of that name: the merge renames one, and the reference quietly points at the *other* one, still evaluating and simply wrong. Left alone where the source project itself has two comps sharing a name, since the reference is genuinely ambiguous there.
 
-> Some references can't be known ahead of time. An expression that builds a layer name or number while it runs, as rigging scripts often do, can't be read without running it, and the confirmation says so rather than pretending the list is complete.
+> Some references can't be known ahead of time. An expression that builds a name or number as it runs, as rigging scripts do, can't be read without running it, and the confirmation says so rather than pretending the list is complete.
 
 #### Essential Graphics
 
-If a comp's Essential Graphics parameters belong to layers you didn't import, those parameters are dropped from the incoming comp, since they have nothing left to control. Parameters belonging to layers that did come are kept.
+Essential Graphics parameters belonging to layers you didn't import are dropped, having nothing left to control. Those belonging to layers that did come are kept.
 
 ---
 
@@ -137,9 +137,7 @@ If a comp's Essential Graphics parameters belong to layers you didn't import, th
 
 <img src="assets/features-search-filter.svg" alt="OPT/ALT + click a filter to solo it" class="doc-illustration bare modal" />
 
-**Search** filters the asset tree by name (case-insensitive substring). Results update live as you type.
-
-**Filter checkboxes** show or hide items by category:
+**Search** filters the tree by name as you type. **Filter checkboxes** show or hide items by category:
 
 | Filter | Covers |
 | ------ | ------ |
@@ -149,9 +147,7 @@ If a comp's Essential Graphics parameters belong to layers you didn't import, th
 | Design | Layered design files (PSD, AI, PDF, EPS…) |
 | 3D | 3D asset files (C4D, OBJ, FBX, GLTF…) |
 
-**OPT/ALT + click** a filter checkbox to solo it, showing only that category and hiding the rest. OPT/ALT + click again to restore the previous state.
-
-Filter preferences are saved between sessions.
+**OPT/ALT + click** a filter to solo it; OPT/ALT + click again to restore. Filter preferences are saved between sessions.
 
 ---
 
@@ -161,7 +157,7 @@ When an item is checked, a **crosshair icon** appears next to it:
 
 <img src="assets/features-targeticon.svg" alt="The Target Icon" class="doc-illustration bare icon" />
 
-Click it to open the Target Picker, a modal that lets you manually point that imported item at a specific existing item or folder in your current project, overriding the automatic name-based merge matching.
+Click it to point that item at a specific item or folder in your current project, overriding the automatic name matching.
 
 <img src="assets/features-target-picker.svg" alt="The Target Picker modal" class="doc-illustration bare modal" />
 
@@ -170,19 +166,17 @@ Click it to open the Target Picker, a modal that lets you manually point that im
 | **Comp or footage item** | Replaces the targeted item. Layers and expressions referencing it update automatically. |
 | **Folder** | Places the imported item into that folder instead of wherever the merge logic would put it. |
 
-Use the search bar and filter checkboxes inside the picker to quickly find the right target in a large project. OPT/ALT + click any folder arrow to collapse or expand all folders at once.
-
-Once a target is set, the crosshair icon turns **blue**. OPT/ALT + click it to clear the assignment.
+The picker has its own search and filters for finding a target in a large project, and OPT/ALT + click on any folder arrow collapses or expands all of them. Once a target is set the crosshair turns **blue**; OPT/ALT + click it to clear.
 
 <img src="assets/features-targeticon_active.svg" alt="The Target Icon" class="doc-illustration bare icon" />
 
 #### Making the folder you actually want
 
-If the right destination doesn't exist yet, build it here instead of going back to After Effects for it. **New Folder** at the bottom of the picker adds one inside whatever is selected, ready to be named.
+If the right destination doesn't exist yet, build it here. **New Folder** adds one inside whatever is selected, ready to be named.
 
 <img src="assets/features-new-folder.svg" alt="A new folder staged in the Target Picker, with its delete and target icons" class="doc-illustration bare compact" />
 
-New folders are shown in blue, and you can do what you like with them:
+New folders show in blue:
 
 | | |
 | --- | --- |
@@ -194,7 +188,7 @@ Drag one and it comes with the cursor, with the folder it would land in outlined
 
 <img src="assets/features-new-folder-drag.svg" alt="Dragging a new folder into another folder" class="doc-illustration bare compact" />
 
-> **Nothing is created until you import.** New folders are a plan, not a change: close the picker and they wait for you, open another target window and they are still there, in the same places. Cancel the import and your project never hears about any of it. They arrive as part of the import itself, so a single Cmd+Z/Ctrl+Z takes them back out along with everything else. A folder you made but pointed nothing at is still created, since you made it on purpose.
+> **Nothing is created until you import.** New folders are a plan: they survive the picker closing, they're still there in the next target window, and cancelling the import means your project never hears about them. They arrive with the import, so one Cmd+Z/Ctrl+Z takes them back out along with everything else. A folder you made but aimed nothing at is still created, since you made it on purpose.
 
 ---
 
@@ -202,17 +196,15 @@ Drag one and it comes with the cursor, with the folder it would land in outlined
 
 <img src="assets/interface-merge-option.svg" alt="An imported Bitmaps folder merging into an existing Images folder" class="doc-illustration bare modal" />
 
-Enable **Try to merge with current project** before importing to fold the incoming content into your existing folder structure.
-
-With merge on, AEP Transplant matches each imported folder against your current project and combines them rather than creating a new top-level import folder. Matching happens in three passes, in order:
+Tick **Try to merge with current project** before importing and each incoming folder is matched against your existing structure and combined with it, rather than landing as a new top-level import folder. Matching happens in three passes:
 
 1. **Exact name.** An imported folder is combined with a folder of the identical name in your project.
-2. **Similar name.** AEP Transplant recognizes common naming variations: ordering prefixes and suffixes are ignored (`a.precomps` matches `02_PRECOMPS`), and common naming dialects count as the same folder (`Images` / `Bitmaps` / `Graphics` / `PNGs`, `Footage` / `Videos` / `Movies`, `Audio` / `Music` / `SFX`, `Precomps` / `Pre Comps` / `Precompositions`, and more).
-3. **Content.** If nothing matches by name at all, a folder whose contents already exist somewhere in your project is combined into wherever those live.
+2. **Similar name.** Ordering prefixes and suffixes are ignored (`a.precomps` matches `02_PRECOMPS`), and naming dialects count as the same folder (`Images` / `Bitmaps` / `Graphics` / `PNGs`, `Footage` / `Videos` / `Movies`, `Audio` / `Music` / `SFX`, `Precomps` / `Pre Comps` / `Precompositions`, and more).
+3. **Content.** With no name match at all, a folder whose contents already exist somewhere is combined into wherever those live.
 
-How the first two passes rank against each other is configurable in [Folder Merge Settings](features.md#folder-merge-settings): by default an exact name match wins wherever it sits in your project, but you can instead favor folders higher in your structure. See the **Folder merge** option there.
+How the first two rank against each other is set in [Folder Merge Settings](features.md#folder-merge-settings): by default an exact name wins wherever it sits, or you can favor folders higher in your structure.
 
-A folder that finds no match of its own doesn't strand what's inside it. AEP Transplant keeps looking one level deeper: subfolders hunt for their own match independently, so a source project that nests everything under one project-named folder still merges cleanly instead of landing as a single unmatched block. Whatever remains after that still gets carried into the closest matched folder, so nothing is left behind unless truly nothing in that branch matches anything in your project.
+A folder that finds no match doesn't strand what's inside it. Subfolders keep hunting independently, so a source project that nests everything under one project-named folder still merges cleanly, and whatever remains is carried into the closest matched folder. Only a branch where nothing matches at all is left behind.
 
 If a same-named item already exists in your project, you'll be prompted:
 
@@ -224,9 +216,9 @@ If a same-named item already exists in your project, you'll be prompted:
 | **Use Current** | Keeps your existing item and discards the incoming duplicate. |
 | **Keep Both** | Imports the incoming item alongside the existing one (name is suffixed). |
 
-Check **Apply to all** before choosing an option to use that same choice for every remaining conflict in this import, instead of being prompted again for each one.
+Tick **Apply to all** to settle every remaining conflict in this import the same way.
 
-The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores everything to a labeled folder at the project root). The import that preceded it is separate and not undoable.
+The merge collapses into a **single Undo**; the import that preceded it is separate and not undoable.
 
 > Merge preference (on/off) is remembered between sessions.
 
@@ -236,9 +228,9 @@ The merge step collapses into a **single Undo** (Cmd+Z/Ctrl+Z once restores ever
 
 <div class="warning-box">⚠️ <strong>To keep keyframe intact, always add new Master Properties at the bottom of the Essential Graphics panel list. Never insert one in the middle.</strong></div>
 
-This is an After Effects behavior, not something AEP Transplant causes. When a merge or replace changes a comp's Essential Graphics list, AEP Transplant detects it and flags it in the import summary, listing which properties were added, removed, or reordered so you know to double-check the keyframed overrides on that comp.
+This is an After Effects behavior, not something the panel causes. When a merge or replace changes a comp's Essential Graphics list, it's flagged in the import summary with the properties added, removed or reordered, so you know which comp to check.
 
-This is a warning only, not an automatic fix. After Effects' scripting API exposes the names of a comp's Master Properties, but gives no way to read or repair which underlying property an existing one is actually bound to. A comp that already has scrambled overrides can't be detected or corrected after the fact, only flagged going forward.
+It's a warning, not a fix. After Effects exposes the names of Master Properties but gives no way to read or repair which underlying property one is bound to, so overrides that are already scrambled can't be detected after the fact, only flagged going forward.
 
 ---
 
@@ -246,7 +238,7 @@ This is a warning only, not an automatic fix. After Effects' scripting API expos
 
 <img src="assets/features-folder-merge-settings.svg" alt="Folder Merge Settings window" class="doc-illustration bare modal" />
 
-This window controls how folders are matched during a merge: the matching strategy, and the word lists that drive the "similar name" pass above. Open **Folder Merge Settings…** from the panel's context menu (right-click the panel, or its **☰** menu).
+Controls how folders are matched during a merge: the strategy, and the word lists behind the "similar name" pass. Open it from the panel's context menu (right-click the panel, or its **☰** menu).
 
 | Control | Description |
 | ------- | ----------- |
@@ -256,7 +248,7 @@ This window controls how folders are matched during a merge: the matching strate
 | **Restore Defaults** | Resets every list back to the selected language's built-in defaults (the Folder merge choice is left alone). |
 | **Save** | Applies your changes immediately, no restart needed. |
 
-> Changes apply to every merge afterward, in any project. There's no need to keep the settings window open.
+> Changes apply to every merge afterward, in any project.
 
 ---
 
@@ -264,18 +256,16 @@ This window controls how folders are matched during a merge: the matching strate
 
 <img src="assets/features-swap-source-main.svg" alt="Swap Source replacing every layer of a file across the project in one action" class="doc-illustration bare modal" />
 
-A **SWAP SOURCE** row appears above the individual layer items of any PSD or AI file, marked with a blue badge. This includes PSD/AI files loaded directly *and* PSD/AI files nested inside an `.aep` you loaded, since AEP Transplant surfaces their layers the same way either way.
+A **SWAP SOURCE** row appears above the layer items of any PSD or AI file, whether loaded directly or nested inside an `.aep`.
 
-**Swap Source** lets you replace every layer of a source file across your entire current project in one action, instead of updating each layer one by one. This is perfect for re-skinning a character rig or updating artwork across a complex project.
-
-**How it works:**
+It replaces every layer of that file across your whole project in one action instead of one at a time, which is what you want for re-skinning a rig or updating artwork project-wide.
 
 1. Check the **SWAP SOURCE** row (and/or its individual layer rows).
 2. Click the **crosshair icon** that appears next to the checked row to open the [Target Picker](features.md#target-picker).
 3. In the picker, select the existing footage item in your current project that you want to replace.
 4. Click **Import Selected**.
 
-AEP Transplant matches the source file's layers to the targeted item's layers by name, replaces each one, and handles any layers that don't find a match by parking them in a "no match" folder.
+Layers are matched to the target's by name and replaced; any that find no match are parked in a "no match" folder.
 
 > OPT/ALT + click the crosshair icon to clear a target assignment.
 
@@ -285,24 +275,24 @@ AEP Transplant matches the source file's layers to the targeted item's layers by
 
 <img src="assets/features-external-assets.svg" alt="The External Assets Found dialog" class="doc-illustration bare modal" />
 
-If the items you're importing use footage stored outside your current project's folder (a colleague's drive, a different job folder, anywhere not under your project), AEP Transplant asks what to do before finishing the import:
+If what you're importing uses footage stored outside your project's folder, you're asked what to do before the import finishes:
 
 | Option | What it does |
 | ------ | ------------ |
 | **Copy to Project** | Copies the external files into your project folder and relinks the imported items to the copies. |
 | **Leave in Place** | Leaves the imported items linked to their current location. |
 
-Copies land in a new folder named `<source file> - AEP Transplant`, created next to wherever your project already keeps most of its footage. Image sequences are copied as a whole, every frame included.
+Copies land in a `<source file> - AEP Transplant` folder, created next to wherever your project already keeps most of its footage. Image sequences are copied whole.
 
-**Proxies count as assets too.** An item with a proxy attached needs two files on disk rather than one, so both are checked and both are copied, and the list marks the proxy ones so you can tell them apart. The proxy setting itself comes across exactly as it was, including whether Use Proxy was switched on.
+**Proxies count as assets too.** An item with one needs two files rather than one, so both are checked and copied, and the list marks which is which. The proxy setting comes across as it was, Use Proxy included.
 
-**You are only asked about files your project doesn't already have.** Import from the same source again and anything already sitting in that folder, unchanged, is simply reused and the items are pointed at it. Nothing is copied twice and there's no dialog to dismiss. Files are matched by size and modification date, and when those disagree the two are compared directly, so a copy made by an older version of AEP Transplant is still recognised as the same file.
+**You are only asked about files your project doesn't already have.** Import from the same source again and anything unchanged in that folder is reused, with no dialog to dismiss. Files are matched by size and modification date, and compared directly when those disagree, so a copy made by an older version is still recognised.
 
 #### When a file of that name is already there
 
 <img src="assets/features-file-conflict.svg" alt="The File Already Exists dialog, offering Overwrite, Use Current or Keep Both" class="doc-illustration bare modal" />
 
-If a file in that folder shares a name with something being copied in but isn't the same file, AEP Transplant asks rather than choosing for you:
+If a file there shares a name with something being copied in but isn't the same file, you're asked rather than it being chosen for you:
 
 | Option | What it does |
 | ------ | ------------ |
@@ -310,13 +300,13 @@ If a file in that folder shares a name with something being copied in but isn't 
 | **Use Current** | Keeps the file that's there and links to that instead. |
 | **Keep Both** | Copies the incoming file in beside it, numbered, leaving the original alone. |
 
-Tick **Apply to all** to settle the rest of the import the same way. Whatever you choose carries through to the items themselves, so you won't be asked the same question twice in different words a moment later.
+Tick **Apply to all** to settle the rest of the import the same way. Your answer carries through to the items themselves, so the same question isn't put to you twice in different words.
 
-**What counts as "outside"** is anything not under the folder above your `.aep`, so a sibling `Footage` folder next to an `AEP` folder is treated as part of the project. That step up stops short of folders that hold everything rather than one project (your home folder and its standard children like Desktop or Documents, a drive's root), where the `.aep`'s own folder is the boundary instead. Without that, a project saved straight to the Desktop would count your entire home folder as "the project" and never offer to copy anything.
+**"Outside"** means anything not under the folder above your `.aep`, so a sibling `Footage` folder next to an `AEP` folder counts as part of the project. That step up stops at folders that hold everything rather than one project (your home folder and its standard children, a drive's root), where the `.aep`'s own folder is the boundary instead. Otherwise a project saved to the Desktop would treat your whole home folder as "the project" and never offer to copy anything.
 
-Illustrator and Photoshop files brought in as individual layers are covered by this too. Copying one relinks every layer taken from it to the copy.
+PSD and AI files brought in as individual layers are covered too: copying one relinks every layer taken from it.
 
-> This check only runs on a saved project, since AEP Transplant needs your project's location to know what counts as "external" in the first place.
+> This only runs on a saved project, since the panel needs your project's location to know what counts as external.
 
 ---
 
@@ -324,7 +314,7 @@ Illustrator and Photoshop files brought in as individual layers are covered by t
 
 <img src="assets/features-update-watcher.svg" alt="Blue dots indicating updated files" class="doc-illustration bare modal" />
 
-AEP Transplant watches the files you've worked with and tells you when they change:
+The panel watches the files you've worked with and tells you when they change:
 
 - A **blue dot on the clock button** means one or more projects in your recent list have been saved since you last loaded them here.
 - A **blue dot next to the loaded file name** means the currently open source file has changed on disk since you loaded it.
@@ -333,27 +323,23 @@ AEP Transplant watches the files you've worked with and tells you when they chan
 
 <img src="assets/features-reload.svg" alt="Reload button" class="doc-illustration bare modal" />
 
-Click **↺ Reload**, in the top bar next to **✕**, to re-read the current file from disk and pick up any changes.
+Click **↺ Reload**, in the top bar next to **✕**, to re-read the file from disk. On a shared project this is what tells you a teammate has changed the `.aep` you're sourcing from, before you import something stale.
 
-This is especially useful on shared projects: if a teammate updates an `.aep` you're sourcing from, the dot lets you know before you import stale content.
-
-> Reload only refreshes what's showing in the tree. It has no effect on what actually gets imported: every import already reads the file's current state from disk, whether or not you've clicked Reload first.
+> Reload only refreshes the tree. Every import reads the file's current state from disk anyway, whether or not you clicked it first.
 
 #### What changed inside the file
 
-The file-name dot tells you a project was saved. Reload it and the dots move inside: the comps and footage items that actually changed are marked, and opening a comp marks the individual layers within it. Items and layers that are new since you last looked are marked as well. Deleted ones aren't, having no row left to carry a mark, and neither is something you only moved to another folder.
+The file-name dot says a project was saved. Reload and the dots move inside: the comps and footage that actually changed are marked, and opening a comp marks the layers within it. New items are marked too. Deleted ones aren't, having no row left to carry a mark, and neither is something you only moved to another folder.
 
-Each reload shows that reload's changes and nothing older, so a dot always answers "what changed since I last reloaded". Reload again with nothing new and the marks clear.
+Each reload shows that reload's changes and nothing older, so a dot always answers "what changed since I last reloaded". A project opened here for the first time is recorded silently, having no earlier version to compare against.
 
-The first time you open a project here it is recorded silently and shows no dots, because there is no earlier version of it to compare against.
-
-> What counts as a change is the content itself, which catches edits the panel doesn't otherwise read: keyframes, effects, masks, expressions, text. What it deliberately ignores is anything that is only a change of view, so scrubbing the playhead, selecting layers, twirling properties open and rearranging panels all leave a project unmarked, as does After Effects' own internal bookkeeping.
+> A change means the content itself, which catches edits the panel doesn't otherwise read: keyframes, effects, masks, expressions, text. Anything that is only a change of view is ignored, so scrubbing, selecting layers, twirling properties open and rearranging panels leave a project unmarked, as does After Effects' own bookkeeping.
 
 ---
 
 <h2 id="undo">Undo Behavior</h2>
 
-AEP Transplant separates the import into two phases, each with different undo behavior:
+The import happens in two phases, which undo differently:
 
 | Phase | Undoable? | Notes |
 | ----- | :-------: | ----- |
@@ -365,4 +351,4 @@ AEP Transplant separates the import into two phases, each with different undo be
 1. Undo the merge: Cmd+Z/Ctrl+Z **once**. This parks everything back into a single labeled folder at the project root (named after the source file, suffixed `(not merged)` if anything was left unmatched).
 2. Manually delete that folder from the Project panel.
 
-Nothing is ever silently lost; it's one manual deletion instead of a full automatic undo.
+Nothing is ever silently lost. It's one manual deletion instead of a full automatic undo.
