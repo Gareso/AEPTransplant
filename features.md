@@ -15,6 +15,8 @@ The core workflow:
 
 <img src="assets/features-drop-target.svg" alt="The panel's empty state, inviting a file to be dropped on it" class="doc-illustration bare compact" />
 
+Once a file is loaded that button becomes an **✕**, which clears it again along with whatever you had checked and any destinations you had set, ready for a different source.
+
 Only the checked items and their real dependencies are extracted. Everything else stays behind.
 
 That includes whatever your selection reaches through an **expression**, which nothing else in the project points at. You are shown what has to come and asked first. See [What comes with a layer](features.md#what-comes-with-a-layer).
