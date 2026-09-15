@@ -1,0 +1,58 @@
+<svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <g id="nf-chev"><path d="M-4,-1.5 L0,2.5 L4,-1.5" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <!-- Literal paths from client/main.js. Folders are drawn at 15x15 out of
+         a 24x24 viewBox, hence 15/24 = 0.625. -->
+    <g id="nf-folder"><g transform="scale(0.625) translate(-12,-12)" fill="#9a9a9a">
+      <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+    </g></g>
+    <g id="nf-folder-new"><g transform="scale(0.625) translate(-12,-12)" fill="#4d9fff">
+      <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+    </g></g>
+    <!-- The picker's crosshair: 13x13 display out of a 24x24 viewBox -->
+    <g id="nf-target"><g transform="scale(0.5417) translate(-12,-12)" fill="none" stroke="#9a9a9a" stroke-width="2">
+      <circle cx="12" cy="12" r="7"/><line x1="12" y1="1" x2="12" y2="23"/><line x1="1" y1="12" x2="23" y2="12"/>
+    </g></g>
+  </defs>
+
+  <rect x=".5" y=".5" width="399" height="167" rx="6" fill="#232323" stroke="#3a3a3a"/>
+
+  <!-- Picker rows, 22px apart. x follows the panel's own formula:
+       arrow = 6 + 16*depth, icon = arrow + 17, label = icon + 22. -->
+
+  <!-- 02_PRECOMPS, depth 1 -->
+  <use xlink:href="#nf-chev" href="#nf-chev" x="22" y="21"/>
+  <use xlink:href="#nf-folder" href="#nf-folder" x="46.5" y="21"/>
+  <text x="61" y="25" fill="#b8bcc2" font-weight="600" font-size="11">02_PRECOMPS</text>
+
+  <!-- Renders: staged, not created. Accent throughout, and hovered, so it
+       shows the delete beside the crosshair. -->
+  <rect x="6" y="32" width="388" height="22" rx="4" fill="#2f3438"/>
+  <use xlink:href="#nf-chev" href="#nf-chev" x="38" y="43"/>
+  <use xlink:href="#nf-folder-new" href="#nf-folder-new" x="62.5" y="43"/>
+  <text x="77" y="47" fill="#4d9fff" font-weight="600" font-size="11">Renders</text>
+  <g transform="translate(364,43)" stroke="#9a9a9a" stroke-width="1.3" stroke-linecap="round">
+    <line x1="-3.5" y1="-3.5" x2="3.5" y2="3.5"/><line x1="3.5" y1="-3.5" x2="-3.5" y2="3.5"/>
+  </g>
+  <use xlink:href="#nf-target" href="#nf-target" x="387" y="43"/>
+
+  <!-- v2, staged inside it. Every folder row carries a chevron, empty or not. -->
+  <use xlink:href="#nf-chev" href="#nf-chev" x="54" y="65"/>
+  <use xlink:href="#nf-folder-new" href="#nf-folder-new" x="78.5" y="65"/>
+  <text x="93" y="69" fill="#4d9fff" font-weight="600" font-size="11">v2</text>
+
+  <!-- 03_ASSETS, depth 1 -->
+  <use xlink:href="#nf-chev" href="#nf-chev" x="22" y="87"/>
+  <use xlink:href="#nf-folder" href="#nf-folder" x="46.5" y="87"/>
+  <text x="61" y="91" fill="#b8bcc2" font-weight="600" font-size="11">03_ASSETS</text>
+
+  <line x1="6" y1="110.5" x2="394" y2="110.5" stroke="#1c1c1c"/>
+
+  <!-- The actions row: .modal-btn at .picker-new-folder's sizing -->
+  <rect x="10.5" y="124.5" width="112" height="25" rx="5" fill="#232323" stroke="#444"/>
+  <g transform="translate(21,137) scale(0.5833) translate(-12,-12)" fill="#e0e0e0">
+    <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-1 8h-3v3h-2v-3h-3v-2h3V9h2v3h3v2z"/>
+  </g>
+  <text x="37" y="141" fill="#e0e0e0" font-size="11">New Folder</text>
+  <text x="132" y="141" fill="#9a9a9a" font-size="10">2 new folders</text>
+</svg>

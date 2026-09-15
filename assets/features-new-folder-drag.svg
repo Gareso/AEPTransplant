@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <g id="dg-chev"><path d="M-4,-1.5 L0,2.5 L4,-1.5" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="dg-folder"><g transform="scale(0.625) translate(-12,-12)" fill="#9a9a9a">
+      <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+    </g></g>
+    <g id="dg-folder-new"><g transform="scale(0.625) translate(-12,-12)" fill="#4d9fff">
+      <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+    </g></g>
+  </defs>
+
+  <rect x=".5" y=".5" width="399" height="127" rx="6" fill="#232323" stroke="#3a3a3a"/>
+
+  <!-- The row being dragged: still in place, dimmed to 0.45 -->
+  <g opacity="0.45">
+    <use xlink:href="#dg-chev" href="#dg-chev" x="38" y="23"/>
+    <use xlink:href="#dg-folder-new" href="#dg-folder-new" x="62.5" y="23"/>
+    <text x="77" y="27" fill="#4d9fff" font-weight="600" font-size="11">Renders</text>
+  </g>
+
+  <!-- 03_ASSETS: the folder under the cursor, outlined as the drop target.
+       An outline rather than a fill, so the row's own state stays readable
+       underneath it. -->
+  <use xlink:href="#dg-chev" href="#dg-chev" x="22" y="67"/>
+  <use xlink:href="#dg-folder" href="#dg-folder" x="46.5" y="67"/>
+  <text x="61" y="71" fill="#b8bcc2" font-weight="600" font-size="11">03_ASSETS</text>
+  <rect x="6.5" y="56.5" width="387" height="21" rx="4" fill="none" stroke="#4d9fff"/>
+
+  <!-- Footage sitting inside it, to show where the folder is headed -->
+  <use xlink:href="#dg-folder" href="#dg-folder" x="62.5" y="89"/>
+  <text x="77" y="93" fill="#b8bcc2" font-weight="600" font-size="11">Footage</text>
+
+  <!-- The pill carried under the cursor: the panel positions it +12,+8 from
+       the pointer, and it paints above the picker (z-index 200). -->
+  <g transform="translate(150,60)">
+    <rect x="0" y="0" width="85" height="25" rx="4" fill="#232323" stroke="#4d9fff"/>
+    <use xlink:href="#dg-folder-new" href="#dg-folder-new" x="16.5" y="12.5"/>
+    <text x="31" y="16.5" fill="#4d9fff" font-weight="600" font-size="11">Renders</text>
+  </g>
+  <!-- The cursor itself, at the pill's top-left less the 12,8 offset -->
+  <g transform="translate(138,52)" fill="#ffffff" stroke="#232323" stroke-width="1" stroke-linejoin="round">
+    <path d="M0,0 L0,14 L3.6,10.6 L6,16 L8.4,14.8 L6,9.6 L11,9.4 Z"/>
+  </g>
+</svg>

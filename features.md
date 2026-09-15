@@ -176,6 +176,26 @@ Once a target is set, the crosshair icon turns **blue**. OPT/ALT + click it to c
 
 <img src="assets/features-targeticon_active.svg" alt="The Target Icon" class="doc-illustration bare icon" />
 
+#### Making the folder you actually want
+
+If the right destination doesn't exist yet, build it here instead of going back to After Effects for it. **New Folder** at the bottom of the picker adds one inside whatever is selected, ready to be named.
+
+<img src="assets/features-new-folder.svg" alt="A new folder staged in the Target Picker, with its delete and target icons" class="doc-illustration bare compact" />
+
+New folders are shown in blue, and you can do what you like with them:
+
+| | |
+| --- | --- |
+| **Rename** | Double-click the name. Enter commits, Esc reverts. |
+| **Delete** | The **✕** on the row, next to the crosshair. |
+| **Move** | Drag it into any other folder, new or existing, or onto your project's top row. |
+
+Drag one and it comes with the cursor, with the folder it would land in outlined.
+
+<img src="assets/features-new-folder-drag.svg" alt="Dragging a new folder into another folder" class="doc-illustration bare compact" />
+
+> **Nothing is created until you import.** New folders are a plan, not a change: close the picker and they wait for you, open another target window and they are still there, in the same places. Cancel the import and your project never hears about any of it. They arrive as part of the import itself, so a single Cmd+Z/Ctrl+Z takes them back out along with everything else. A folder you made but pointed nothing at is still created, since you made it on purpose.
+
 ---
 
 <h2 id="smart-merge">Smart Merge</h2>

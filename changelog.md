@@ -6,13 +6,14 @@
 
 <h3 style="color:#EB6669">ADDED</h3>
 
-* **Folder import:** folders tick like anything else. Checking one takes everything inside it, all the way down, which beats hunting through a long list of comps one row at a time. See [Folder Import](features.md#folder-import).
-* **One destination for a whole folder:** give a folder a target and its entire branch travels there together, structure intact. Whether it merges into the folder you picked or arrives nested inside it depends on its own name, and the row tells you which before you import.
+* **Folder import:** check a folder to take everything inside it. See [Folder Import](features.md#folder-import).
+* **Folder targets:** send a whole folder to one place, merging into it or nesting inside it depending on the name.
+* **New folders from the Target Picker:** build the destination you want without leaving the panel, then rename, move or delete it before importing. See [Target Picker](features.md#target-picker).
 
 <h3 style="color:#EB6669">CHANGED</h3>
 
-* **Duplicates are found wherever they live:** aiming something at a folder now checks the whole project for an item of that name, not just the folder it is headed for, so you are asked about a comp you already have somewhere else instead of quietly getting a second copy. The prompt names the folder that copy sits in, and whatever you choose, the incoming item stays where you aimed it.
-* **Tidier rows:** the change dot moved to its own column down the left edge, so the marks line up instead of stepping in and out with each level, and rows no longer shift or grow when you select them.
+* **Duplicates are checked project-wide:** aiming at a folder now finds a copy you already have anywhere, not just at the destination.
+* **Folder names show as they are:** the tree no longer forces them to capitals, so `PreRenders` stays `PreRenders`.
 
 ---
 
