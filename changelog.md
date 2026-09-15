@@ -15,6 +15,10 @@
 * **Duplicates are checked project-wide:** aiming at a folder now finds a copy you already have anywhere, not just at the destination.
 * **Folder names show as they are:** the tree no longer forces them to capitals, so `PreRenders` stays `PreRenders`.
 
+<h3 style="color:#EB6669">FIXED</h3>
+
+* **Intel Mac support:** imports now run on Intel Macs.
+
 ---
 
 ### v1.1.4 - September 10, 2026
