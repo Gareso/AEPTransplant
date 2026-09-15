@@ -24,7 +24,8 @@ Loads a source file. Dragging one onto the panel from Finder or Explorer does th
 | Control | Description |
 | ------- | ----------- |
 | **Clock button** | Opens the [Recent Projects](interface.md#recent-projects) list. A blue dot on this button means one or more recent projects have been updated since you last loaded them. |
-| **→ Choose AEP, PSD or AI…** | Opens a file dialog to pick a source file. Supports `.aep`, `.psd`, `.psb`, and `.ai`. Once a file is loaded this becomes an **✕** button that clears the current file. |
+| **→ Choose AEP, PSD or AI…** | Opens a file dialog. Takes `.aep`, `.psd`, `.psb` and `.ai`. |
+| **✕** | The same button once a file is loaded. Clears it, along with whatever you had checked and any destinations you had set. |
 | **File name** | Displays the name of the currently loaded file. Hover over it when it's truncated to see the full path. A blue dot next to the name means the loaded file has changed on disk since you opened it. |
 | **Reload button** | Appears next to the **✕** once a file is loaded. Re-reads the file from disk, picking up any changes since you opened it. |
 
