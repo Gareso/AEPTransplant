@@ -2,7 +2,7 @@
 
 ---
 
-### v1.2.0 - in progress
+### v1.2.0 - September 16, 2026
 
 <h3 style="color:#EB6669">ADDED</h3>
 
