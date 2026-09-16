@@ -9,15 +9,12 @@
 * **Folder import:** check a folder to take everything inside it. See [Folder Import](features.md#folder-import).
 * **Folder targets:** send a whole folder to one place, merging into it or nesting inside it depending on the name.
 * **New folders from the Target Picker:** build the destination you want without leaving the panel, then rename, move or delete it before importing. See [Target Picker](features.md#target-picker).
+* **Intel Mac support:** imports now run on Intel Macs.
 
 <h3 style="color:#EB6669">CHANGED</h3>
 
 * **Duplicates are checked project-wide:** aiming at a folder now finds a copy you already have anywhere, not just at the destination.
 * **Folder names show as they are:** the tree no longer forces them to capitals, so `PreRenders` stays `PreRenders`.
-
-<h3 style="color:#EB6669">FIXED</h3>
-
-* **Intel Mac support:** imports now run on Intel Macs.
 
 ---
 
