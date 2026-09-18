@@ -8,7 +8,7 @@
   Browse any project file without leaving After Effects, cherry-pick exactly what you need, and merge it in cleanly. No more Reduce Project. No more duplicated assets.
 </p>
 
-[Get it on AeScripts.com](https://www.aescripts.com) [User Guide →](aeptransplant)
+[Get it on AeScripts.com](https://aescripts.com/aep-transplant/) [User Guide →](aeptransplant)
 
 
 <!-- background color -->

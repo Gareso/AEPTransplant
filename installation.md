@@ -20,7 +20,7 @@ It is a **CEP extension** (not a script), so the installation is slightly differ
 
 <h3 id="option-2">Option 2: Manual installation via ZXP Installer</h3>
 
-1. Download the `.zxp` file from the product page on [aescripts.com](https://aescripts.com).
+1. Download the `.zxp` file from the [product page on aescripts.com](https://aescripts.com/aep-transplant/).
 2. Download and open [ZXP/UXP Installer](https://aescripts.com/learn/zxp-installer/).
 3. Drag the `.zxp` file into the installer window.
 4. Restart After Effects.
