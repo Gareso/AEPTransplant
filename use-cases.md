@@ -31,3 +31,28 @@ Stop creating from scratch what's already been created by someone else, and move
 | **Keep the library's file name constant** | It's what lets you take full advantage of the [Update Watcher](features.md#update-watcher) and the [Recent Projects](interface.md#recent-projects) list. I suggest making backups instead of bumping the library version. |
 | **Bump the version in the comp name every time** | So everyone knows which version they have in their scene. |
 | **One shared library, not a copy per animator** | Two copies drift apart, and then neither one is the source of truth. |
+
+---
+
+<h2 id="recover-keyframes">Recover Keyframes & Effects</h2>
+
+Sooner or later something you simplified, stripped back or deleted days ago turns out to be wanted after all, and by then the comp has moved on so far that opening an older save and working from that would cost you every change you've made since.
+
+Because AEP Transplant reads any `.aep` file, your own previous versions are a library too. Open the save that still has the animation, [import just that layer](features.md#layer-targets) straight into the comp you're working in, copy across the keyframes, effects or masks you came for, and delete the layer you borrowed.
+
+The rest of your project never moves.
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/KvrhKxPYVRc" title="AEP Transplant | USE CASE 2: Recover Keyframes, Effects & more" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+The borrowed layer arrives with a number appended when the comp already has a layer of that name, so expressions on both versions stay pointed at the layer they were written for.
+
+---
+
+### Best practices
+
+| Do this | Because |
+| --- | --- |
+| **Save incrementally, and keep the increments** | They're what you'll be reaching into. A version you overwrote is a version you can't borrow from. |
+| **Aim it at the comp you're working in** | Use the [Target Picker](features.md#target-picker) on the layer so it lands beside the version you're fixing, ready to copy from. |
