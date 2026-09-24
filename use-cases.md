@@ -38,7 +38,7 @@ Stop creating from scratch what's already been created by someone else, and move
 
 Sooner or later something you simplified, stripped back or deleted days ago turns out to be wanted after all, and by then the comp has moved on so far that opening an older save and working from that would cost you every change you've made since.
 
-Because AEP Transplant reads any `.aep` file, your own previous versions are a library too. Open the save that still has the animation, [import just that layer](features.md#layer-targets) straight into the comp you're working in, copy across the keyframes, effects or masks you came for, and delete the layer you borrowed.
+Because AEP Transplant reads any `.aep` file, your own previous versions are a library too. Open the version that still has the animation, [import just that layer](features.md#layer-targets) straight into the comp you're working in, copy across the keyframes, effects or masks you came for, and delete the layer you borrowed.
 
 The rest of your project never moves.
 
