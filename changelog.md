@@ -2,6 +2,21 @@
 
 ---
 
+### v1.3.0 - September 28, 2026
+
+<h3 style="color:#EB6669">CHANGED</h3>
+
+* **Faster imports:** an import now gets going straight away instead of pausing for several seconds first.
+* **Change dots moved:** the dot marking a changed row now sits next to that row's icon rather than out at the edge of the panel. See [Update Watcher](features.md#update-watcher).
+
+<h3 style="color:#EB6669">FIXED</h3>
+
+* **Layer targets work for Photoshop and Illustrator files:** a layer aimed at a folder now lands in it, and one aimed at an existing item replaces it. See [Target Picker](features.md#target-picker).
+* **Flattened Photoshop files open:** a `.psd` with no layers of its own now shows its single image instead of reporting an error.
+* **Target Picker selection:** the highlight around the first item under a folder is no longer clipped along its top edge.
+
+---
+
 ### v1.2.0 - September 16, 2026
 
 <h3 style="color:#EB6669">ADDED</h3>
