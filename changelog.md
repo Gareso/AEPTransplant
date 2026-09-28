@@ -6,14 +6,12 @@
 
 <h3 style="color:#EB6669">CHANGED</h3>
 
-* **Faster imports:** an import now gets going straight away instead of pausing for several seconds first.
-* **Change dots moved:** the dot marking a changed row now sits next to that row's icon rather than out at the edge of the panel. See [Update Watcher](features.md#update-watcher).
+* **Faster imports:** AEP Transplant is much faster now.
+* **Minor UI changes:** the project panel's change dots now sit next to the item name, plus other small changes. See [Update Watcher](features.md#update-watcher).
 
 <h3 style="color:#EB6669">FIXED</h3>
 
-* **Layer targets work for Photoshop and Illustrator files:** a layer aimed at a folder now lands in it, and one aimed at an existing item replaces it. See [Target Picker](features.md#target-picker).
-* **Flattened Photoshop files open:** a `.psd` with no layers of its own now shows its single image instead of reporting an error.
-* **Target Picker selection:** the highlight around the first item under a folder is no longer clipped along its top edge.
+* **PSD and AI file targets:** layer targets now work as intended, and single-layer PSDs open without issues. See [Target Picker](features.md#target-picker).
 
 ---
 
