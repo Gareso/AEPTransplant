@@ -15,6 +15,7 @@
 * **Better default folder:** external assets now land in the folder of your project that holds the most media.
 * **Windows file dialogs:** choosing a file or folder now opens the current Explorer dialog, with Quick Access and the address bar.
 * **Clearer errors:** a file that won't open now says why, with a way out.
+* **Empty folders:** the Target Picker now shows empty folders by default.
 
 <h3 style="color:#EB6669">FIXED</h3>
 

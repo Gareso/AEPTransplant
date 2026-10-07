@@ -175,9 +175,8 @@
     <text class="st0" transform="translate(64.5 224.5)"><tspan x="0" y="0">03_ASSETS</tspan></text>
   </g>
   <g>
-    <g id="picker-filter-on">
-      <rect class="st14" x="14.5" y="285.5" width="10" height="10" rx="2.5" ry="2.5"/>
-      <path class="st8" d="M16.9,290.7l1.6,1.6,3.6-4"/>
+    <g id="picker-filter-off6" data-name="picker-filter-off">
+      <rect class="st11" x="14.5" y="285.5" width="10" height="10" rx="2.5" ry="2.5"/>
     </g>
     <text class="st2" transform="translate(28.5 294.5)"><tspan x="0" y="0">Hide empty folders</tspan></text>
   </g>
