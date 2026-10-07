@@ -6,13 +6,13 @@
 
 <h3 style="color:#EB6669">ADDED</h3>
 
-* **Templates:** open `.aet` template files just like projects.
+* **Templates:** .AET files are now supported.
 * **Choose where copies go:** pick the folder for external assets before they're copied, with or without a subfolder. See [External Assets](features.md#external-assets).
 * **Cancel an import:** back out from the External Assets dialog before anything is copied or imported.
 
 <h3 style="color:#EB6669">CHANGED</h3>
 
-* **Better default folder:** external assets now land in the folder of your project that holds the most media.
+* **Better default folder:** default external assets folder is the folder of your project that holds the most media.
 * **Windows file dialogs:** choosing a file or folder now opens the current Explorer dialog, with Quick Access and the address bar.
 * **Clearer errors:** a file that won't open now says why, with a way out.
 * **Empty folders:** the Target Picker now shows empty folders by default.
