@@ -38,7 +38,7 @@
   <path d="M36,18 H58 Q63,18 63,23 V35 Q63,40 58,40 H36 Z" fill="#232323" stroke="#444"/>
   <text x="49.5" y="33" fill="#e0e0e0" font-size="11" text-anchor="middle">✕</text>
   <circle cx="76" cy="27" r="3" fill="#4d9fff"/>
-  <text x="86" y="33" fill="#9a9a9a" font-size="13">Colleague_Rodrigo.aep</text>
+  <text x="86" y="33" fill="#9a9a9a" font-size="13">Colleague_Studio.aep</text>
 
   <!-- Search & Filters -->
   <rect x="8" y="58" width="304" height="24" rx="5" fill="#232323" stroke="#444"/>

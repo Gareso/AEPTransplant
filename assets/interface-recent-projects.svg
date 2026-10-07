@@ -10,7 +10,7 @@
   <path d="M36,10 H58 Q63,10 63,15 V27 Q63,32 58,32 H36 Z" fill="#232323" stroke="#444"/>
   <text x="49.5" y="25" fill="#e0e0e0" font-size="11" text-anchor="middle">✕</text>
   <circle cx="76" cy="19" r="3" fill="#4d9fff"/>
-  <text x="86" y="25" fill="#9a9a9a" font-size="13">Colleague_Rodrigo.aep</text>
+  <text x="86" y="25" fill="#9a9a9a" font-size="13">Colleague_Studio.aep</text>
 
   <!-- popup -->
   <rect x="8" y="42" width="230" height="180" rx="6" fill="#232323" stroke="#444"/>
@@ -20,7 +20,7 @@
     <text x="28" y="64">Client_Project_v27.aep</text>
     <text x="220" y="64" fill="#9a9a9a" text-anchor="middle" font-size="13">×</text>
 
-    <text x="16" y="94">Colleague_Rodrigo.aep</text>
+    <text x="16" y="94">Colleague_Studio.aep</text>
     <text x="220" y="94" fill="#9a9a9a" text-anchor="middle" font-size="13">×</text>
 
     <circle cx="20" cy="122" r="3" fill="#4d9fff"/>

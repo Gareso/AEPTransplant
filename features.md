@@ -27,9 +27,11 @@ That includes whatever your selection reaches through an **expression**, which n
 
 | Type | What you browse | What gets imported |
 | ---- | --------------- | ------------------ |
-| `.aep` | Full project tree: comps, folders, all footage | Selected items + their real comp/footage dependencies |
+| `.aep` / `.aet` | Full project tree: comps, folders, all footage | Selected items + their real comp/footage dependencies |
 | `.psd` / `.psb` | Layers of the document | Selected layers as individual footage items |
 | `.ai` | Layers / artboards of the document | Selected layers as individual footage items |
+
+Templates (`.aet`) open exactly like projects. If a file won't open, the panel says why in plain words and offers a way out, like picking another file or dropping a missing one from Recent.
 
 > The import itself is not undoable. To remove one, undo the merge (Cmd+Z/Ctrl+Z once), which parks everything into a labeled folder at the project root, then delete that folder. See [Undo Behavior](features.md#undo).
 
@@ -279,14 +281,23 @@ Layers are matched to the target's by name and replaced; any that find no match 
 
 <img src="assets/features-external-assets.svg" alt="The External Assets Found dialog" class="doc-illustration bare modal" />
 
-If what you're importing uses footage stored outside your project's folder, you're asked what to do before the import finishes:
+If what you're importing uses footage stored outside your project's folder, you're asked what to do before anything reaches your project:
 
 | Option | What it does |
 | ------ | ------------ |
-| **Copy to Project** | Copies the external files into your project folder and relinks the imported items to the copies. |
+| **Copy to Project** | Copies the external files into your project and relinks the imported items to the copies. |
 | **Leave in Place** | Leaves the imported items linked to their current location. |
+| **Cancel** | Stops the import. Nothing is copied and nothing is imported. |
 
-Copies land in a `<source file> - AEP Transplant` folder, created next to wherever your project already keeps most of its footage. Image sequences are copied whole.
+#### Choosing where the copies go
+
+The **Copy to** row shows where the files will land before anything is copied, so there are no surprises afterwards. Click **Choose…** to send them anywhere else.
+
+With **Create a subfolder** ticked, the copies get a `<source file> - AEP Transplant` folder of their own inside that location, which keeps each library's files together and apart from yours. Untick it to copy them straight in.
+
+The suggestion starts in the folder inside your project that holds the most media, and a library you've copied from before goes back to where its earlier copies are. Pick somewhere yourself and the panel remembers it for that project, checkbox included, so the next import starts there. Correct it once and it sticks.
+
+A folder outside your project is allowed, with a warning: copies there still count as external, so you'd be asked again next time. Image sequences are copied whole.
 
 **Proxies count as assets too.** An item with one needs two files rather than one, so both are checked and copied, and the list marks which is which. The proxy setting comes across as it was, Use Proxy included.
 
