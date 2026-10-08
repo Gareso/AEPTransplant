@@ -11,6 +11,8 @@
   * [Folder Import](features.md#folder-import)
   * [Layer Import](features.md#layer-import)
   * [Search & Filter](features.md#search-filter)
+  * [Previews](features.md#previews)
+  * [Preview Settings](features.md#preview-settings)
   * [Target Picker](features.md#target-picker)
   * [Smart Merge](features.md#smart-merge)
   * [Folder Merge Settings](features.md#folder-merge-settings)
@@ -20,3 +22,4 @@
   * [Undo Behavior](features.md#undo)
 * [Support](support.md)
 * [Changelog](changelog.md)
+* [Credits & Licenses](credits.md)

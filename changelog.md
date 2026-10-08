@@ -2,6 +2,20 @@
 
 ---
 
+### v1.4.0 - October 8, 2026
+
+<h3 style="color:#EB6669">ADDED</h3>
+
+* **Comp previews:** see the first seconds of any comp, or a still frame, without leaving your project. See [Previews](features.md#previews).
+* **Footage previews:** images, videos, Photoshop, Illustrator, PDF and 3D files preview too.
+* **Preview Settings:** choose between animated and still previews, and clear saved previews. See [Preview Settings](features.md#preview-settings).
+
+<h3 style="color:#EB6669">FIXED</h3>
+
+* **Image sequences:** sequences now show their real name, like `render_[0001-0100].png`, instead of their folder's.
+
+---
+
 ### v1.3.1 - October 7, 2026
 
 <h3 style="color:#EB6669">ADDED</h3>

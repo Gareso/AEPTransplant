@@ -49,7 +49,7 @@ Filter preferences are saved between sessions.
 The full folder and asset structure of the loaded file, laid out like After Effects' Project panel.
 
 - **Folders** expand and collapse on click; OPT/ALT + click an arrow for all of them at once. They tick like anything else, taking everything inside, and carry their own crosshair that sends the whole branch to one place. See [Folder Import](features.md#folder-import).
-- **Comps** show a tooltip on hover with dimensions, duration, frame rate and usage count.
+- **Comps** show a tooltip on hover with dimensions, duration, frame rate and usage count, and their preview once they have one.
 - **Label colors** appear as small swatches, matching After Effects' palette.
 - **Solids, Nulls and Adjustment Layers** are excluded, being scaffolding rather than reusable assets.
 - **↺ Reload** re-reads the file from disk without clearing your selection.
@@ -57,6 +57,8 @@ The full folder and asset structure of the loaded file, laid out like After Effe
 **Checking an item** selects it for import, and a **crosshair** appears for opening the [Target Picker](features.md#target-picker). A row inside a folder that already has a destination shows that one instead, dimmed, since the folder speaks for everything under it.
 
 **Comps** also carry a **`>`** button that opens their layers for importing individually. See [Layer Import](features.md#layer-import).
+
+Hover a comp or a piece of footage and an **eye** appears at the end of its row, for a quick look at it. See [Previews](features.md#previews).
 
 Any PSD or AI file gets a **SWAP SOURCE** row above its layer items, whether loaded directly or nested inside an `.aep`. See [Swap Source](features.md#swap-source).
 

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Arial">
+  <defs>
+    <!-- Icons below are the literal paths client/main.js renders, left in
+         their own coordinate space and re-centred + scaled here. -->
+    <g id="type-comp"><g transform="scale(0.5) translate(-12,-12)" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="12 2 2 7 12 12 22 7"/>
+      <polyline points="2 17 12 22 22 17"/>
+      <polyline points="2 12 12 17 22 12"/>
+    </g></g>
+    <g id="checkbox-off"><rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="#1a1a1a" stroke="#8a8a8a" stroke-width="1.3"/></g>
+    <!-- .preview-btn eye: 16x16 viewBox shown at 11px -->
+    <g id="eye"><g transform="scale(0.6875) translate(-8,-8)" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 8s2.6-5 7-5 7 5 7 5-2.6 5-7 5-7-5-7-5z"/>
+      <circle cx="8" cy="8" r="2.2"/>
+    </g></g>
+    <!-- .drill-btn chevron: 8x8 viewBox, stroke-width 1.4 -->
+    <g id="chevron-right"><g transform="translate(-4,-4)" fill="none" stroke="#9a9a9a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 1.5L5.5 4L3 6.5"/>
+    </g></g>
+    <!-- .preview-btn .spinner: 8px box, 1.5px border, top border in accent -->
+    <g id="spinner">
+      <circle r="3.25" fill="none" stroke="#444" stroke-width="1.5"/>
+      <path d="M-2.3,-2.3 A3.25,3.25 0 0 1 2.3,-2.3" fill="none" stroke="#4d9fff" stroke-width="1.5"/>
+    </g>
+    <g id="row-base" font-size="12">
+      <rect x="16" y="-4" width="8" height="8" rx="2" fill="#B53838"/>
+      <use xlink:href="#checkbox-off" href="#checkbox-off" x="40" y="0"/>
+      <use xlink:href="#type-comp" href="#type-comp" x="60" y="0"/>
+      <text x="79" y="4" fill="#e0e0e0">HERO_Shot</text>
+      <rect x="242.5" y="-7.5" width="15" height="15" rx="3" fill="none" stroke="#3a3a3a"/>
+      <rect x="262.5" y="-7.5" width="15" height="15" rx="3" fill="none" stroke="#3a3a3a"/>
+      <use xlink:href="#chevron-right" href="#chevron-right" x="270" y="0"/>
+    </g>
+  </defs>
+
+  <!-- 1: hovered, nothing rendered yet -->
+  <rect x="8" y="8" width="280" height="36" rx="6" fill="#232323" stroke="#3a3a3a"/>
+  <rect x="12" y="14" width="272" height="24" rx="4" fill="#2f3438"/>
+  <use xlink:href="#row-base" href="#row-base" x="0" y="26"/>
+  <use xlink:href="#eye" href="#eye" x="250" y="26" color="#9a9a9a"/>
+  <text x="304" y="24" font-size="13" font-weight="700" fill="#1a1a1a">Render a preview</text>
+  <text x="304" y="39" font-size="11" fill="#8e8e8e">Hover a row and click the eye.</text>
+
+  <!-- 2: rendering, shown without hovering -->
+  <rect x="8" y="54" width="280" height="36" rx="6" fill="#232323" stroke="#3a3a3a"/>
+  <use xlink:href="#row-base" href="#row-base" x="0" y="72"/>
+  <use xlink:href="#spinner" href="#spinner" x="250" y="72"/>
+  <text x="304" y="70" font-size="13" font-weight="700" fill="#1a1a1a">Rendering</text>
+  <text x="304" y="85" font-size="11" fill="#8e8e8e">Click the spinner to cancel.</text>
+
+  <!-- 3: hovered, a saved preview -->
+  <rect x="8" y="100" width="280" height="36" rx="6" fill="#232323" stroke="#3a3a3a"/>
+  <rect x="12" y="106" width="272" height="24" rx="4" fill="#2f3438"/>
+  <use xlink:href="#row-base" href="#row-base" x="0" y="118"/>
+  <use xlink:href="#eye" href="#eye" x="250" y="118" color="#4d9fff"/>
+  <text x="304" y="116" font-size="13" font-weight="700" fill="#1a1a1a">Preview saved</text>
+  <text x="304" y="131" font-size="11" fill="#8e8e8e">Hover the name to play it.</text>
+</svg>

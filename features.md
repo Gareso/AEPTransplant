@@ -157,6 +157,51 @@ Essential Graphics parameters belonging to layers you didn't import are dropped,
 
 ---
 
+<h2 id="previews">Previews</h2>
+
+Not sure which comp is which? Hover a row and click the **eye** to see it, without opening the source project or leaving yours.
+
+<img src="assets/features-previews.svg" alt="A comp's preview playing in a popover under its row" class="doc-illustration bare compact" />
+
+Comps are rendered by After Effects in the background, so your own project stays open and nothing lands in your undo history. The first preview of a comp takes a few seconds, most of it getting ready to render, and the popover counts the frames as they arrive. After that it's saved. Hover the comp's name and it plays straight away.
+
+<img src="assets/features-preview-button.svg" alt="The eye button before rendering, while rendering, and with a saved preview" class="doc-illustration bare modal" />
+
+- **Click the eye again** (or **Cancel**): stops a render. One comp renders at a time, and any others you ask for wait their turn.
+- **Render Again**: brings a preview up to date. The popover tells you when the comp, or anything inside it, has changed since the preview was made. OPT/ALT + click the eye does the same.
+- **×, Escape, or a click anywhere else**: closes the popover. A render carries on in the background.
+- **Gear**: opens [Preview Settings](#preview-settings).
+
+> Comp previews render small, about 640 pixels on the long side, over the comp's background color, just like the Composition viewer. Missing footage shows as color bars rather than stopping the preview.
+
+#### Footage
+
+Footage previews too. Images show the moment you hover them. Everything else is made the first time you click the eye, usually in a second or two, and saved like a comp preview, so hovering plays it from then on.
+
+- **Images**: PNG, JPEG, GIF, WebP, BMP, SVG and AVIF.
+- **Videos**: MP4 and WebM play as they are. MOV files are usually ProRes, which the panel can't play, so on a Mac the part you're previewing is converted into a small copy first (transparency shows as black, and MOVs in Apple's Animation codec can't be converted). On Windows, After Effects' panels can't play MP4 or MOV at all, so After Effects renders them the same way it renders comps, transparency kept. This needs After Effects 2023 or later.
+- **Photoshop, Illustrator and PDF**: a PSD or AI layer shows just that layer, and a whole file its full artwork. PDFs show their first page, the one After Effects imports.
+- **Image sequences**: play their frames, PNG, JPEG and other image sequences as well as Photoshop, Illustrator and PDF ones.
+- **3D models**: GLB, glTF, OBJ and FBX files turn on a turntable, or show a three-quarter view as a still, with their materials and textures. Cinema 4D files show the snapshot Cinema 4D saves inside them, the same one its Content Browser shows.
+
+TIFF, EXR and audio files have no eye. Previews also work for PSD and AI files opened directly in the panel.
+
+<h4 id="preview-settings">Preview Settings</h4>
+
+<img src="assets/features-preview-settings.svg" alt="Preview Settings window" class="doc-illustration bare compact" />
+
+Choose what a preview shows. Open it from the gear in the popover, or from the panel's context menu (right-click the panel, or its **☰** menu).
+
+| Control | Description |
+| ------- | ----------- |
+| **Animated** | Plays the first few seconds: 2 by default, up to 10. A comp shorter than that plays in full. |
+| **A still frame** | Shows a single frame at the time you choose. A comp shorter than that shows its last frame. |
+| **Clear Cache** | Deletes every saved preview. The cache keeps your 400 most recent ones on its own. |
+
+> Changing a setting keeps the previews you already have. Each one says it was made with different settings, and Render Again updates it.
+
+---
+
 <h2 id="target-picker">Target Picker</h2>
 
 When an item is checked, a **crosshair icon** appears next to it:
