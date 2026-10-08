@@ -197,6 +197,7 @@ Choose what a preview shows. Open it from the gear in the popover, or from the p
 | **Animated** | Plays the first few seconds: 2 by default, up to 10. A comp shorter than that plays in full. |
 | **A still frame** | Shows a single frame at the time you choose. A comp shorter than that shows its last frame. |
 | **Clear Cache** | Deletes every saved preview. The cache keeps your 400 most recent ones on its own. |
+| **Enable previews** | Turns previews off altogether: no eye, and nothing plays on hover. Saved previews are kept for when you turn them back on. |
 
 > Changing a setting keeps the previews you already have. Each one says it was made with different settings, and Render Again updates it.
 
