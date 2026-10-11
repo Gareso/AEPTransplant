@@ -2,6 +2,14 @@
 
 ---
 
+### v1.4.1 - Unreleased
+
+<h3 style="color:#EB6669">FIXED</h3>
+
+* **Consistent comp previews:** comp previews now look the same whatever your After Effects render defaults are.
+
+---
+
 ### v1.4.0 - October 8, 2026
 
 <h3 style="color:#EB6669">ADDED</h3>
