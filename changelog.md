@@ -8,11 +8,13 @@
 
 * **Faster comp previews:** comp previews now appear a few seconds sooner.
 * **Smaller previews:** saved previews now take about a tenth of the disk space.
+* **Previews stop with their project:** closing a project or opening another now cancels its previews.
 
 <h3 style="color:#EB6669">FIXED</h3>
 
 * **Consistent comp previews:** comp previews now look the same whatever your After Effects render defaults are.
 * **Smooth preview playback:** previews no longer flash their background color while they load.
+* **Cancel stops the render:** cancelling a comp preview on a Mac now stops After Effects rendering it straight away.
 
 ---
 
