@@ -2,11 +2,17 @@
 
 ---
 
-### v1.4.1 - Unreleased
+### v1.4.1 - October 12, 2026
+
+<h3 style="color:#EB6669">CHANGED</h3>
+
+* **Faster comp previews:** comp previews now appear a few seconds sooner.
+* **Smaller previews:** saved previews now take about a tenth of the disk space.
 
 <h3 style="color:#EB6669">FIXED</h3>
 
 * **Consistent comp previews:** comp previews now look the same whatever your After Effects render defaults are.
+* **Smooth preview playback:** previews no longer flash their background color while they load.
 
 ---
 
