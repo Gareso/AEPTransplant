@@ -5,6 +5,7 @@
 * [Use Cases](use-cases.md#use-cases)
   * [Motion Library](use-cases.md#motion-library)
   * [Recover Keyframes & Effects](use-cases.md#recover-keyframes)
+  * [Combine Projects](use-cases.md#combine-projects)
   * <span class="sidebar-soon">...more to come</span>
 * [Features](features.md#features)
   * [Browse & Import](features.md#browse-import)

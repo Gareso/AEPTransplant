@@ -56,3 +56,28 @@ The borrowed layer arrives with a number appended when the comp already has a la
 | --- | --- |
 | **Save incrementally, and keep the increments** | They're what you'll be reaching into. A version you overwrote is a version you can't borrow from. |
 | **Aim it at the comp you're working in** | Use the [Target Picker](features.md#target-picker) on the layer so it lands beside the version you're fixing, ready to copy from. |
+
+---
+
+<h2 id="combine-projects">Combine Projects</h2>
+
+Bringing shots, precomps and assets from several projects into one usually means a new folder for every import, duplicate footage and solids, and an hour of tidying before anyone can find anything.
+
+With [Smart Merge](features.md#smart-merge), every incoming folder finds its match in your project, even when the names differ (`Bitmaps` into `Images`, `a.precomps` into `02_PRECOMPS`), and folds right in. Only what each comp actually uses comes along, and when something you already have shows up again, you choose: **Replace**, **Use Current** or **Keep Both**.
+
+Footage stored outside the project can be [copied in alongside it](features.md#external-assets), so the combined project stays self-contained and ready to hand off.
+
+One project, one structure, no duplicates.
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/g3aTOjZRG2I" title="AEP Transplant | USE CASE 3: Combine Projects" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+---
+
+### Best practices
+
+| Do this | Because |
+| --- | --- |
+| **Save the destination project first** | Footage can only be copied in once the panel knows where your project lives. |
+| **Teach it your folder names** | If your team uses its own names, add them in [Folder Merge Settings](features.md#folder-merge-settings) so they match too. |
