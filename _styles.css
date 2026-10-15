@@ -496,17 +496,3 @@ section.cover .cover-main>p:last-child a:hover {
     font-size: 15px;
     font-weight: 600;
 }
-
-/* Placeholder row in the sidebar for a section that will grow (more Use Case
-   videos). Deliberately not a link, so it needs its own colour: the theme only
-   ever styles sidebar <a> elements, which would leave bare text inheriting a
-   near-black colour against the dark panel. Muted and non-interactive, so it
-   reads as "coming" rather than as a broken link. */
-.sidebar-soon {
-    color: #6e6e6e;
-    font-size: 13px;
-    font-weight: 600;
-    font-style: italic;
-    cursor: default;
-    user-select: none;
-}

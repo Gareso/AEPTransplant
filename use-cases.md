@@ -81,3 +81,27 @@ One project, one structure, no duplicates.
 | --- | --- |
 | **Save the destination project first** | Footage can only be copied in once the panel knows where your project lives. |
 | **Teach it your folder names** | If your team uses its own names, add them in [Folder Merge Settings](features.md#folder-merge-settings) so they match too. |
+
+---
+
+<h2 id="one-scene-many-animators">One Scene, Many Animators</h2>
+
+On a tight deadline, splitting a scene between animators gets it done faster, but putting the pieces back together usually means duplicate comps, doubled footage and a long tidy-up.
+
+With AEP Transplant, everyone works in their own copy of the project, so nobody waits on anyone else. When the work is done, the scene owner opens each copy, picks the comps that changed, and aims each one at the comp it replaces with the [Target Picker](features.md#target-picker). Each comp brings only what it actually uses, and anything already in the project is reused instead of copied in a second time.
+
+The scene comes back together finished, and still clean.
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/Db50K97WziI" title="AEP Transplant | USE CASE 4: One Scene, Many Animators" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+---
+
+### Best practices
+
+| Do this | Because |
+| --- | --- |
+| **Give each animator their own comps** | If two people change the same comp, whichever you import last replaces the other's work. |
+| **Add a version to the name of every comp you change** | `Scene_v2` tells the scene owner at a glance which comps are new, and which version they're bringing in. |
+| **Aim each new version at the comp it replaces** | With the [Target Picker](features.md#target-picker), the old comp is replaced even though the names differ, and every layer and expression using it updates automatically. |

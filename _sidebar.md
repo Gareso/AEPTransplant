@@ -6,7 +6,7 @@
   * [Motion Library](use-cases.md#motion-library)
   * [Recover Keyframes & Effects](use-cases.md#recover-keyframes)
   * [Combine Projects](use-cases.md#combine-projects)
-  * <span class="sidebar-soon">...more to come</span>
+  * [One Scene, Many Animators](use-cases.md#one-scene-many-animators)
 * [Features](features.md#features)
   * [Browse & Import](features.md#browse-import)
   * [Folder Import](features.md#folder-import)
